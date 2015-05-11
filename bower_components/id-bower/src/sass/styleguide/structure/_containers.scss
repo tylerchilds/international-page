@@ -1,0 +1,214 @@
+/*
+
+Containers
+
+Containers are size agnostic. They could be used as full page width elements or nested.
+
+Markup:
+<div class="container {{modifier_class}}">Container</div>
+
+.container--small             - Container with a small padding
+.container--large             - Container with a large padding
+.container--teal              - Container with a teal background
+.container--white             - Container with a white background
+.container--gray6             - Container with a gray6 background
+.container--gray7             - Container with a gray7 background
+.container--gray8             - Container with a gray8 background
+.container--gray9             - Container with a gray9 background
+.container--tight             - Container with no padding
+.container--tight_x           - Container with no horizontal padding
+.container--tight_y           - Container with no vertical padding
+.container--tight_top         - Container with no top padding
+.container--tight_bottom      - Container with no bottom padding
+.container--bordered          - Container with border
+.container--bordered_top      - Container with top border
+.container--bordered_bottom   - Container with bottom border
+
+Styleguide 8.0
+
+*/
+
+.container{
+  padding: 10px;
+
+  @media (min-width: 768px){
+    padding: 20px;
+  }
+}
+
+.container--small{
+  padding: 10px;
+}
+
+.container--large{
+  padding: 10px;
+
+  @media (min-width: 768px){
+    padding: 40px;
+  }
+}
+
+.container--teal{
+  background-color: $teal;
+}
+
+.container--white{
+  background-color: #fff;
+}
+
+.container--gray6{
+  background-color: $gray6;
+}
+
+.container--gray7{
+  background-color: $gray7;
+}
+
+.container--gray8{
+  background-color: $gray8;
+}
+
+.container--gray9{
+  background-color: $gray9;
+}
+
+.container--tight{
+  padding: 0;
+}
+
+.container--tight_x{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.container--tight_y{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.container--tight_top{
+  padding-top: 0;
+}
+
+.container--tight_bottom{
+  padding-bottom: 0;
+}
+
+.container--bordered{
+  border: 1px solid $gray5;
+  @include border-radius(1px);
+}
+
+.container--bordered_top{
+  border-top: 1px solid $gray5;
+}
+
+.container--bordered_bottom{
+  border-bottom: 1px solid $gray5;
+}
+
+/*
+
+Wrappers
+
+Use wrappers when you need a content area that is the standard width and centered on the page.
+
+Markup:
+<div class="wrapper {{modifier_class}}">Wrapper</div>
+
+.wrapper--padded     - Secondary importance
+
+Styleguide 8.1
+
+*/
+
+.wrapper{
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.wrapper--padded{
+  padding: 40px 0;
+}
+
+/*
+
+Gap
+
+Gaps used for appropriately spacing components
+
+Markup:
+<div class="gap {{modifier_class}}" style="background-color: #000"></div>
+
+.gap              - normal sized gap below
+.gap--small       - small sized gap below
+.gap--large       - large sized gap below
+.gap--xlarge      - large sized gap below
+
+Styleguide 8.2
+
+*/
+
+@mixin gap{
+  padding-bottom: 20px;
+}
+
+@mixin gap--small{
+  padding-bottom: 10px;
+}
+
+@mixin gap--large{
+  padding-bottom: 40px;
+}
+
+@mixin gap--xlarge{
+  padding-bottom: 60px;
+}
+
+.gap{
+  @include gap();
+}
+
+.gap--small{
+  @include gap--small();
+}
+
+.gap--large{
+  @include gap--large();
+}
+
+.gap--xlarge{
+  @include gap--xlarge();
+}
+
+/*
+
+Header
+
+Step headers mostly now
+
+<div class="header--step">
+  Step 1
+  <small>Enter your payment whatever</small>
+</div>
+
+Styleguide 8.3
+
+*/
+
+
+.header--step{
+  background-color: $gray1;
+  color: $white;
+  padding: 8px 10px;
+  @include h3();
+
+  @media screen and (min-width: 768px){
+    padding: 12px 20px;
+  }
+}
+
+.header--step small{
+  font-weight: normal;
+  position: relative;
+}

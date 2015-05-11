@@ -1,0 +1,291 @@
+/*
+
+Header
+
+No Styleguide Reference
+
+*/
+
+.header{
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $z_index-5--header;
+  background-color: $white;
+}
+
+.header-container{
+  height: 45px;
+}
+
+nav{
+  position: relative;
+}
+
+.nav-left{
+  position: absolute;
+  left: 0;
+}
+
+.header-logo{
+  display: block;
+  background: url('#{$asset-path}/images/Identity/iD_logomark.svg') no-repeat;
+  height: 45px;
+  width: 50px;
+
+  @media (min-width: 768px){
+    background-image: url('#{$asset-path}/images/Identity/iD_logo_horizontal.svg');
+    width: 250px;
+  }
+}
+
+.nav-right{
+  position: absolute;
+  right: 0;
+}
+
+.header-signed_in{
+  position: relative;
+  cursor: pointer;
+}
+
+.header-photo{
+  width: 45px;
+  height: 45px;
+  @include border-radius(50px);
+  background: no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.header-account_menu{
+  width: auto;
+  white-space: nowrap;
+}
+
+.header-account_menu a{
+  padding: 10px;
+  border-bottom: 1px solid $gray6;
+  display: block;
+  font-weight: 500;
+
+  &:link,
+  &:visited{
+    color: $gray1;
+  }
+
+  &:hover,
+  &:focus{
+    color: $gray2;
+    background-color: $gray7;
+  }
+}
+
+.header-account_menu li:last-child a{
+  border-bottom: none;
+}
+
+.nav-toggle{
+  line-height: 45px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-weight: 500;
+
+  @media (min-width: 960px){
+    display: none;
+  }
+}
+
+.nav-toggle:before{
+  position: absolute;
+  right: -13px;
+  color: $teal;
+  line-height: inherit;
+}
+
+
+.nav-toggle--signed_out{
+  color: $teal;
+  cursor: pointer;
+  font-size: 25px;
+  line-height: 45px;
+}
+
+
+.nav-primary li{
+  display: inline-block;
+
+  @media (max-width: 959px){
+    display: none;
+  }
+}
+
+.nav-primary a{
+  line-height: 45px;
+  display: block;
+  @extend .link--text;
+  padding: 0 20px;
+}
+
+.btn--inline{
+  display: inline-block;
+}
+
+.sub_nav{
+  @media (min-width: 960px){
+    background-color: $teal;
+    text-align: center;
+  }
+
+  @media (max-width: 959px){
+    @include transition-properties(max-height);
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    background-color: $white;
+  }
+}
+
+.sub_nav li{
+  @media (min-width: 960px){
+    display: inline-block;
+  }
+
+  @media (max-width: 959px){
+
+  }
+}
+
+.sub_nav .sub_nav-header{
+  font-weight: 500;
+
+  @media (min-width: 960px){
+    display: none;
+  }
+}
+
+.sub_nav a{
+  display: block;
+
+  @media (min-width: 960px){
+    padding: 0 20px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 40px;
+
+    &:link,
+    &:visited{
+      color: rgba(255, 255, 255, .75);
+    }
+
+    &:hover,
+    &:focus{
+      background-color: $teal-hover;
+      color: $white;
+    }
+  }
+
+  @media (max-width: 959px){
+    padding: 10px;
+    border-bottom: 1px solid $gray6;
+
+    &:link,
+    &:visited{
+      color: $gray1;
+    }
+
+    &:hover,
+    &:focus{
+      color: $gray2;
+      background-color: $gray7;
+    }
+  }
+}
+
+.sub_nav li:first-child a{
+  @media (max-width: 959px){
+    border-top: 1px solid $gray6;
+  }
+}
+
+
+.sub_nav--is_active{
+  max-height: 2000px;
+}
+
+/*
+
+Footer
+
+No Styleguide Reference
+
+*/
+
+.footer{
+  @include type--small();
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer a{
+  @extend .link--gray3;
+  padding: 4px 0;
+  display: block;
+}
+
+.footer-copyright{
+  @include type--gray3();
+  font-weight: 500;
+  display: inline-block;
+}
+
+.column-footer_nav{
+  @extend .column-4;
+  margin: 10px 0;
+  min-width: 140px;
+}
+
+.footer--signed_out .column-footer_nav{
+  @extend .column-6;
+}
+
+.trust-norton{
+  width: 96px;
+}
+
+.trust-bbb{
+  width: 96px;
+}
+
+.trust-truste{
+  width: 86px;
+}
+
+/*
+
+Miscellaneous
+
+No Styleguide Reference
+
+*/
+
+#notifications {
+  position: absolute;
+  width: 100%;
+  z-index: $z_index-6--notification;
+}
+
+.scroll_to_top{
+  opacity: 0;
+  right: 0;
+  top: 50%;
+  @include transition-properties();
+  z-index: $z_index-5--scroll_top;
+}
+
+.scroll_to_top--is_active{
+  opacity: .9;
+  position: fixed;
+}

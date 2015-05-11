@@ -1,0 +1,219 @@
+/*
+
+Notifications
+
+Markup:
+<div class="notification {{modifier_class}}">
+  <div class="notification-content">Notification</div>
+  <div class="notification-dismiss"></div>
+</div>
+
+.notification--success    - Success notification
+.notification--neutral    - Neutral notification
+.notification--error      - Error notification
+.is_not-dismissable       - Non-dismissable notification
+
+Styleguide 5.0
+
+*/
+
+.notification{
+  padding: 13px 10px;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #fff;
+  @include responsive-font-size(14px, 16px);
+}
+
+.notification-content{
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 34px;
+  position: relative;
+
+  &:before{
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    opacity: .7;
+    font-size: 26px;
+    margin-top: -13px;
+    @include icon();
+  }
+}
+
+.notification-dismiss {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  z-index: $z_index-1--foreground;
+  opacity: .3;
+  font-size: 24px;
+  margin-top: -12px;
+  cursor: pointer;
+  @include transition-properties(opacity);
+
+  &:before{
+    @include icon();
+    content: '\f00d'
+  }
+
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.notification a:link,
+.notification a:visited{
+  color: inherit;
+  text-decoration: underline;
+}
+
+.notification a:hover{
+  color: inherit;
+}
+
+.notification--success{
+  color: $green;
+  border-color: $green;
+}
+
+.notification--neutral{
+  color: $yellow;
+  border-color: $yellow;
+}
+
+.notification--error{
+  color: $red;
+  border-color: $red;
+}
+
+.notification--success .notification-content:before{
+  content: "\f00c";
+}
+
+.notification--neutral .notification-content:before{
+  content: "\f129";
+  left: 8px;
+}
+
+.notification--error .notification-content:before{
+  content: "\f12a";
+  left: 8px;
+}
+
+/*
+
+Notification with Date
+
+Markup:
+<div class="notification notification--error ">
+  <div class="notification-content">
+    Notification
+    <span class="notification-date">May 2011</span>
+  </div>
+</div>
+
+Styleguide 5.0.1
+
+*/
+
+.notification-date{
+  color: $gray3;
+  padding-top: 5px;
+  display: block;
+  font-weight: 500;
+
+  @media screen and (min-width: 768px){
+    padding-top: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -10px;
+    display: inline;
+  }
+}
+
+/*
+
+Other Notifications
+
+Markup:
+<div class="notification {{modifier_class}}">
+  <div class="notification-content">Notification</div>
+</div>
+
+.notification--feedback     - Feedback notification
+.notification--warning      - Warning notification
+
+No Styleguide Reference
+
+*/
+
+.notification--feedback{
+  background-color: $yellow-light;
+  @include type--small();
+  padding-top: 14px;
+  padding-bottom: 14px;
+  text-align: center;
+}
+
+.notification--warning{
+  background-color: $red-light;
+  color: $red;
+  padding-top: 19px;
+  padding-bottom: 19px;
+}
+
+.notification--warning .notification-content{
+  padding: 0 30px;
+}
+
+/*
+
+Large Notifications
+
+Markup:
+<div class="notification notification--large {{modifier_class}}">
+  <div class="notification-content">Notification</div>
+</div>
+
+.notification--success   - Success notification
+.notification--neutral   - Neutral notification
+.notification--error     - Error notification
+
+Styleguide 5.2
+
+*/
+
+.notification--large{
+  font-weight: 500;
+  padding: 18px 20px;
+}
+
+.notification--large .notification-content{
+  padding-left: 45px;
+
+  &:before{
+    opacity: 1;
+    font-size: 30px;
+    margin-top: -15px;
+  }
+}
+
+.notification--large.notification--success .notification-content{
+  &:before{
+    content: "\f058";
+  }
+}
+
+.notification--large.notification--error .notification-content{
+  &:before{
+    content: "\f071";
+    left: 0;
+  }
+}
+
+.notification.is_not-dismissable .notification-dismiss{
+  display: none;
+}

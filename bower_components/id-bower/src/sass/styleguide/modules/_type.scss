@@ -1,0 +1,147 @@
+/*
+
+Type
+
+Typographic modules
+
+Markup:
+<div class="type {{modifier_class}}">
+  <h2>Heading</h2>
+  <p class="subtitle">Subtitle</p>
+</div>
+
+.type--hero             - Type setting for hero modules
+.type--description      - Type setting for descriptions
+
+Styleguide 7.0
+
+*/
+
+.type{
+  position: relative;
+}
+
+.type--hero h1{
+  padding-bottom: 10px;
+}
+
+.type--description h3{
+  padding-bottom: 10px;
+}
+
+/*
+
+Quote
+
+Quote Modules
+
+Markup:
+<div class="type type--quote">
+  <p class="type--quote-body">
+    Quote Body
+  </p>
+  <p class="type--quote-attribution">
+    -Quote Attribute
+  </p>
+</div>
+
+Styleguide 7.2
+
+*/
+
+.type--quote{
+  text-align: center;
+}
+
+.type--quote-body{
+  @include type--large();
+  font-style: italic;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.type--quote-body:before,
+.type--quote-body:after{
+  @include icon();
+  color: $gray4;
+  font-size: 20px;
+  line-height: 20px;
+  font-style: normal;
+  position: relative;
+}
+
+.type--quote-body:before{
+  content: '\f10d';
+}
+
+.type--quote-body:after{
+  content: '\f10e';
+  top: 5px;
+}
+
+.type--quote-attribution{
+  font-style: italic;
+  color: $gray2;
+}
+
+/*
+
+Spacer
+
+Circle spacers to separate type
+
+Markup:
+<span class="type_spacer {{modifier_class}}">The circle is the spacer</span>
+
+.type_spacer--before        - Spacer to the left
+.type_spacer--after         - Spacer to the right
+.type_spacer--white         - White type spacer
+.type_spacer--teal          - Teal type spacer
+.type_spacer--gray3         - gray3 type spacer
+
+Styleguide 7.3
+
+*/
+
+.type_spacer{
+  position: relative;
+}
+
+.type_spacer:after{
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  top: 50%;
+  margin-top: -3px;
+  @include border-radius(3px);
+  background-color: $gray3;
+  content: '';
+}
+
+.type_spacer--before{
+  padding-left: 20px;
+}
+
+.type_spacer--before:after{
+  left: 4px;
+}
+
+.type_spacer--after{
+  padding-right: 20px;
+}
+
+.type_spacer--after:after{
+  right: 4px;
+}
+
+.type_spacer--white:after{
+  background-color: $white;
+}
+
+.type_spacer--teal:after{
+  background-color: $teal;
+}
+
+.type_spacer--gray3:after{
+  background-color: $gray3;
+}

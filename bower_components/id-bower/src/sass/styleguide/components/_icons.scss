@@ -1,0 +1,529 @@
+/*
+
+Icons
+
+Icons applied to components
+
+Styleguide 4.0
+
+*/
+
+[class*="icon"]{
+  &:link,
+  &:visited,
+  &:hover,
+  &:focus,
+  &:active{
+    color: inherit;
+  }
+}
+
+/*
+
+Circle icon that displays a social network from the custom icon library
+
+Markup:
+<span class="icon customicon-github {{modifier_class}}"></span>
+
+.icon--is_not-active          - inactive icon state
+.icon--no_hover               - no hover state
+
+Styleguide 4.1
+
+*/
+
+$networks: (facebook, twitter, linkedin, github, googleplus, blogger, vimeo, flickr, instagram, youtube, etsy, foursquare, wordpress, runkeeper, soundcloud, reddit);
+$network-colors: ($facebook, $twitter, $linkedin, $github, $googleplus, $blogger, $vimeo, $flickr, $instagram, $youtube, $etsy, $foursquare, $wordpress, $runkeeper, $soundcloud, $reddit);
+
+.icon{
+  position: relative;
+  height: 28px;
+  width: 28px;
+  text-align: center;
+  line-height: 28px;
+  display: inline-block;
+  border: 1px solid $gray3;
+  cursor: pointer;
+  @include border-radius(30px);
+  @include transition-properties(border-color background-color color);
+
+  &:before{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+  }
+}
+
+@for $i from 1 through length($networks) {
+  .icon.customicon-#{nth($networks, $i)}{
+    background-color: nth($network-colors, $i);
+    border-color: nth($network-colors, $i);
+    color: #fff;
+
+    &:not(.icon--no_hover):hover{
+      background-color: darken(nth($network-colors, $i), 5%);
+      border-color: darken(nth($network-colors, $i), 5%);
+    }
+  }
+}
+
+.icon.icon--is_not-active{
+  background-color: $white;
+  border-color: $gray3;
+  color: $gray3;
+
+  &:not(.icon--no_hover):hover{
+    color: $white;
+  }
+}
+
+.icon--no_hover{
+  cursor: default;
+}
+
+/*
+
+Icon Buttons
+
+Icon button that displays a social network from the custom icon library
+
+Markup:
+<span class="icon_button customicon-github {{modifier_class}}">Connect</span>
+
+.icon_button--is_not-active          - inactive icon button state
+.icon_button--no_hover               - no hover state
+
+Styleguide 4.2
+
+*/
+
+.icon_button{
+  position: relative;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  display: inline-block;
+  padding: 0 15px 0 35px;
+  color: #fff;
+  cursor: pointer;
+  @include border-radius(2px);
+  @include transition-properties(border-color background-color color);
+
+  &:before{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 5px;
+    bottom: 0;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+  }
+}
+
+@for $i from 1 through length($networks) {
+  .icon_button.customicon-#{nth($networks, $i)}{
+    background-color: nth($network-colors, $i);
+
+    &:not(.icon_button--no_hover):hover{
+      background-color: darken(nth($network-colors, $i), 5%);
+      border-color: darken(nth($network-colors, $i), 5%);
+    }
+  }
+}
+
+.icon_button.icon_button--is_not-active{
+  background-color: $white;
+  border: 1px solid $gray3;
+  color: $gray3;
+
+  &:hover{
+    color: $white;
+  }
+}
+
+.icon_button--large{
+  height: 38px;
+  font-size: 16px;
+  line-height: 38px;
+  padding: 0 20px 0 40px;
+
+  &:not(.icon_button--no_hover):before{
+    left: 10px;
+    font-size: 22px;
+    height: 22px;
+    width: 22px;
+  }
+}
+
+.icon_button--no_hover{
+  cursor: default;
+}
+
+/*
+
+Icon Headers
+
+Icon attached to a header
+
+Markup:
+<div class="icon_header fa-envelope {{modifier_class}}">
+  Social Profiles
+</div>
+
+.icon_header--large         - Large icon header
+
+Styleguide 4.3
+
+*/
+
+.icon_header{
+  background-color: $gray6;
+  padding: 10px 20px 10px 50px;
+  position: relative;
+  font-weight: 500;
+  @include type--small();
+}
+
+.icon_header:before{
+  position: absolute;
+  left: 20px;
+  font-size: 16px;
+  top: 50%;
+  margin-top: -9px;
+  color: $gray2;
+}
+
+.icon_header--large{
+  padding: 17px 20px 17px 60px;
+  @include h3();
+}
+
+.icon_header--large:before{
+  font-size: 22px;
+  margin-top: -11px;
+}
+
+/*
+
+Icon Header with small text
+
+
+Markup:
+<div class="icon_header icon_header--large customicon-phone {{modifier_class}}">
+  Social Profiles
+  <small>With Social Networks</small>
+</div>
+
+Styleguide 4.3.1
+
+*/
+
+.icon_header small{
+  font-style: italic;
+  font-weight: normal;
+  @include responsive-font-size(14px, 18px);
+  display: block;
+
+  @media (min-width: 768px){
+    display: inline;
+  }
+}
+
+/*
+
+Number Bubble Icons
+
+Usually used together with an image to number "steps". Default color is gray2, default position is top left.
+
+Markup:
+<div class="bubble_container">
+  <span class="bubble {{modifier_class}}">2</span>
+  <img src="http://placehold.it/350x150">
+</div>
+
+.bubble--bottom_right   - bottom right
+.bubble--top_right      - top right
+.bubble--bottom_left    - bottom left
+
+Styleguide 4.4
+
+*/
+
+$bubble-size : 46px;
+$bubble-border_size : 5px;
+$bubble-offset  : -(($bubble-size / 2) - 10);
+
+.bubble_container {
+  position: relative;
+  display: inline-block;
+}
+
+.bubble {
+  position: absolute;
+  top: $bubble-offset;
+  left: $bubble-offset;
+  border-radius: $bubble-size;
+  border: $bubble-border_size solid $white;
+  width: $bubble-size;
+  height: $bubble-size;
+  background-color: $gray2;
+  text-align: center;
+  color: $white;
+  @include font-size(25px);
+  line-height: $bubble-size;
+  font-family: $secondary-font;
+}
+
+.bubble--top_right {
+  left: auto;
+  right: $bubble-offset;
+}
+
+.bubble--bottom_right {
+  left: auto;
+  top: auto;
+  bottom: $bubble-offset;
+  right: $bubble-offset;
+}
+
+.bubble--bottom_left {
+  top: auto;
+  bottom: $bubble-offset;
+}
+
+
+/*
+
+Icon List
+
+Lists with icons as bullets
+
+Markup:
+<ul class="icon_list {{modifier_class}}">
+  <li class="icon_list-li customicon-Check_mark_icon">Valid</li>
+  <li class="icon_list-li fa-lock">Locked</li>
+</ul>
+
+.icon_list--large         - Large icon list
+.icon_list--top           - Top aligned icon list
+
+Styleguide 4.4
+
+*/
+
+.icon_list{
+  list-style-type: none;
+}
+
+.icon_list--large .icon_list-li{
+  line-height: 34px;
+  color: $gray1;
+}
+
+.icon_list--top .icon_list-li{
+  padding-top: 0;
+}
+
+.icon_list--top .icon_list-li:before{
+  top: 0;
+  margin-top: 0;
+}
+
+/*
+
+Icon List items
+
+Modifiers for the items in the icon list
+
+Markup:
+<ul class="icon_list">
+  <li class="icon_list-li customicon-Check_mark_icon {{modifier_class}}">Valid</li>
+  <li class="icon_list-li fa-lock {{modifier_class}}">Locked</li>
+</ul>
+
+.icon_list-li--success      - Success coloring for the icon
+.icon_list-li--top          - Item aligned to the top
+
+Styleguide 4.4.1
+
+*/
+
+.icon_list-li{
+  position: relative;
+  padding: 5px 0 5px 25px;
+  color: $gray2;
+}
+
+.icon_list-li:before{
+  position: absolute;
+  left: 0;
+  color: $gray4;
+  top: 50%;
+  margin-top: -10px;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.icon_list-li--success:before{
+  color: $green;
+}
+
+.icon_list-li--top{
+  padding-top: 0;
+}
+
+.icon_list-li--top:before{
+  top: 0;
+  margin-top: 0;
+}
+
+/*
+
+Icon Box
+
+Box shaped icon that house an element
+
+Markup:
+<div class="icon_box fa-chevron-right {{modifier_class}}"></div>
+
+.icon_box--gray               - inactive icon state
+
+Styleguide 4.5
+
+*/
+
+.icon_box{
+  background-color: $teal;
+  color: $teal-dark;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  position: relative;
+  @include transition-properties(color background-color);
+}
+
+.icon_box:before{
+  position: absolute;
+  @include icon();
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: -9px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 18px;
+}
+
+.icon_box:hover{
+  color: $white;
+}
+
+.icon_box--gray{
+  background-color: $gray2;
+  color: $gray1;
+}
+
+.icon_box--gray:hover{
+  background-color: $gray2;
+}
+
+/*
+
+Draw icons
+
+Illustrations as icons
+
+Markup:
+<div class="draw {{modifier_class}}"></div>
+
+.draw--small              - Small illustrated icons
+.draw--shield             - IDS Shield icon
+
+Styleguide 4.6
+
+*/
+
+.draw:before{
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  margin-right: 5px;
+  content: '';
+}
+
+.draw--small:before{
+  height: 16px;
+  width: 16px;
+  top: 2px;
+}
+
+.draw--shield:before{
+  background: url('#{$asset-path}/images/IdentitySmart/Shields/IDS-GoldShield.svg') no-repeat 50% 50%;
+}
+
+/*
+
+Icon Attach
+
+Icon attatchment for an element.
+
+Markup:
+<div style="position: relative; width: 100px; height: 100px; background-color: #000; border-radius: 100px;">
+  <div class="icon_attach fa-envelope {{modifier_class}}" ></div>
+</div>
+<div style="position: relative; width: 100px; height: 100px; background-color: #000; border-radius: 100px;">
+  <div class="icon_attach draw draw--shield draw--small {{modifier_class}}" ></div>
+</div>
+
+.icon_attach--small             - Small icon
+
+Styleguide 4.7
+
+*/
+
+.icon_attach{
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  text-align: center;
+  right: 0;
+  bottom: 0;
+  background-color: $white;
+  @include border-radius(30px);
+}
+
+.icon_attach:before{
+  position: absolute;
+  line-height: 34px;
+  font-size: 20px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.icon_attach--small{
+  width: 24px;
+  height: 24px;
+  right: -5px;
+  bottom: -5px;
+}
+
+.icon_attach--small:before{
+  line-height: 28px;
+  font-size: 16px;
+}
+
+.icon_attach--no_background{
+  background-color: transparent;
+}

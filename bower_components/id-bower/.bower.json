@@ -1,0 +1,42 @@
+{
+  "name": "id-bower",
+  "version": "0.1.66",
+  "homepage": "https://github.com/identity-dev/id-bower",
+  "authors": [
+    "Tyler Childs <tylerwchilds@gmail.com>"
+  ],
+  "description": "Bower package containing front end components.",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "assets",
+    "gulpfile.js",
+    "package.json",
+    "README.md",
+    ".kss-node.json"
+  ],
+  "devDependencies": {
+    "font-awesome": "~4.3.0",
+    "jquery": "~>1.9",
+    "underscore": "~>1.5.0",
+    "jquery.ui": "~1.11.4",
+    "jquery-validate": "~1.13.1",
+    "velocity": "~1.1.0",
+    "backbone": "~1.1.2",
+    "backbone.marionette": "~2.4.1",
+    "backbone-validation": "~0.11.3"
+  },
+  "_release": "0.1.66",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.66",
+    "commit": "6e9050a90ce0f9a6f8df8018a002aec6bbff143b"
+  },
+  "_source": "git@github.com:identity-dev/id-bower.git",
+  "_target": "~>0.1.0",
+  "_originalSource": "git@github.com:identity-dev/id-bower.git"
+}

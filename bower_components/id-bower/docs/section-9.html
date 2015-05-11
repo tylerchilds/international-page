@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js ie lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>iD Styleguide</title>
+    <meta name="keywords" content="pattern, library, styleguide, identity, inflection, baller css">
+    <meta name="description" content="A styleguide/pattern library for identity.com">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <meta name="apple-touch-fullscreen" content="yes">
+
+    
+  <link href="../public/css/id-bower.css" rel="stylesheet" />
+  <link href="../styleguide/public/css/styleguide.css" rel="stylesheet" />
+
+  </head>
+  <body class="language-markup">
+
+    <a role="back-to-top" href="javascript:;" class="scroll_to_top js-scroll_to_top icon_box icon_box--gray fa-arrow-up"></a>
+
+ <header class="header">
+  <div class="header-container container container--small clearfix">
+
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="https://www.identity.com" class="header-logo" target="_blank"></a>
+      </div>
+
+      <div class="nav-right">
+        <div class="header-signed_in js-click-popover" data-id="js-popover-account_menu">
+          <div class="header-photo" style="background-image: url('http://fillmurray.com/g/45/45');">
+          </div>
+          <div class="draw draw--small draw--shield icon_attach icon_attach--small"></div>
+
+
+          <ul class="header-account_menu popover popover--right_below popover--menu" id="js-popover-account_menu">
+            <li>
+              <a href="/id-bower/" class="draw draw--shield draw--small">Styleguide</a>
+            </li>
+            <li>
+              <a href="/id-bower/docs">Documentation</a>
+            </li>
+            <li>
+              <a href="https://www.identity.com" target="_blank">Identity.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav-primary u-ta-center">
+        <div class="nav-toggle js-toggle-mobile_nav fa-caret-down">
+          Menu
+        </div>
+        <ul>
+          <li>
+            <a href="/id-bower/">Styleguide</a>
+          </li>
+          <li>
+            <a href="/id-bower/docs">Documentation</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <ul class="sub_nav js-sub_nav">
+    <li class="sub_nav-header u-ta-center">
+        <a href="/id-bower/" class="draw draw--shield draw--small">Styleguide</a>
+    </li>
+
+    <li>
+      <a href="/id-bower/docs/section-2.html">Buttons</a>
+    </li>
+    <li>
+      <a href="/id-bower/docs/section-3.html">Forms</a>
+    </li>
+    <li>
+      <a href="/id-bower/docs/section-4.html">Icons</a>
+    </li>
+    <li>
+      <a href="/id-bower/docs/section-8.html">Containers</a>
+    </li>
+    <li>
+      <a href="/id-bower/docs/section-9.html">Grid</a>
+    </li>
+  </ul>
+</header>
+<div id="notifications"></div>
+
+    <div class="main js-content container--large">
+        <div class="wrapper container container--large container--white">
+            
+
+<div class="gap gap--large nav_kss">
+  <ul class="container container--bordered container--white">
+  <!--       <a href="#">
+          <h4 class="u-disabled">Grid</h4>
+        </a> -->
+    <li><a href="./index.html">Home</a></li>
+      <li>
+        <a href="section-1.html"><!--1.0: -->Typography</a>
+      </li>
+      <li>
+        <a href="section-2.html"><!--2.0: -->Buttons</a>
+      </li>
+      <li>
+        <a href="section-3.html"><!--3.0: -->Form Elements</a>
+      </li>
+      <li>
+        <a href="section-4.html"><!--4.0: -->Icons</a>
+      </li>
+      <li>
+        <a href="section-5.html"><!--5.0: -->Notifications</a>
+      </li>
+      <li>
+        <a href="section-6.html"><!--6.0: -->Kit</a>
+      </li>
+      <li>
+        <a href="section-7.html"><!--7.0: -->Type</a>
+      </li>
+      <li>
+        <a href="section-8.html"><!--8.0: -->Containers</a>
+      </li>
+      <li>
+        <a href="section-9.html"><!--9.0: -->Grid</a>
+      </li>
+  </ul>
+</div>
+
+
+
+
+
+      <article class="pattern">
+          <h2 id="9">Grid</h2>
+          <section class="example">
+            <div class="example-demo">
+              <div class="kss-example"><div class="grid ">
+  <div class="column-4">First</div>
+  <div class="column-4">Second</div>
+</div></div>
+                <hr />
+                <h4>Reversed grid row <span class="u-f-right"><code>.grid--reverse</code></span></h4>
+                <div class="kss-example"><div class="grid grid--reverse">
+  <div class="column-4">First</div>
+  <div class="column-4">Second</div>
+</div></div>
+                <hr />
+                <h4>Grid with no gutters <span class="u-f-right"><code>.grid--gutter_bottom</code></span></h4>
+                <div class="kss-example"><div class="grid grid--gutter_bottom">
+  <div class="column-4">First</div>
+  <div class="column-4">Second</div>
+</div></div>
+                <hr />
+                <h4>Grid with no gutters <span class="u-f-right"><code>.grid--gutter_small</code></span></h4>
+                <div class="kss-example"><div class="grid grid--gutter_small">
+  <div class="column-4">First</div>
+  <div class="column-4">Second</div>
+</div></div>
+                <hr />
+                <h4>Grid with no gutters <span class="u-f-right"><code>.grid--no_gutter</code></span></h4>
+                <div class="kss-example"><div class="grid grid--no_gutter">
+  <div class="column-4">First</div>
+  <div class="column-4">Second</div>
+</div></div>
+                <hr />
+                <h4>Collapsed grid for mobile <span class="u-f-right"><code>.grid--collapse</code></span></h4>
+                <div class="kss-example"><div class="grid grid--collapse">
+  <div class="column-4">First</div>
+  <div class="column-4">Second</div>
+</div></div>
+                <hr />
+                <h4>Align columns left <span class="u-f-right"><code>.grid--left</code></span></h4>
+                <div class="kss-example"><div class="grid grid--left">
+  <div class="column-4">First</div>
+  <div class="column-4">Second</div>
+</div></div>
+                <hr />
+                <h4>Align columns center <span class="u-f-right"><code>.grid--center</code></span></h4>
+                <div class="kss-example"><div class="grid grid--center">
+  <div class="column-4">First</div>
+  <div class="column-4">Second</div>
+</div></div>
+                <hr />
+                <h4>Align columns right <span class="u-f-right"><code>.grid--right</code></span></h4>
+                <div class="kss-example"><div class="grid grid--right">
+  <div class="column-4">First</div>
+  <div class="column-4">Second</div>
+</div></div>
+            </div>
+            <div class="example-code">
+<pre class="prettyprint no-copy">&lt;div class=&quot;grid &quot;&gt;
+  &lt;div class=&quot;column-4&quot;&gt;First&lt;/div&gt;
+  &lt;div class=&quot;column-4&quot;&gt;Second&lt;/div&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <div class="example-toggle"></div>
+          </section>
+      </article>
+
+
+        </div>
+    </div>
+
+    <footer class="footer js-footer container container--large container--gray8 ">
+  <div class="footer-nav wrapper">
+    <div class="grid grid--collapse">
+      <div class="column-6">
+        <div class="grid grid--no_gutter">
+          <div class="column-footer_nav explore">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="https://www.identity.com/">Home</a></li>
+              <li class="u-hidden--is-signed_out"><a href="/identitysmart/dashboard">IdentitySmart</a></li>
+              <li class="u-hidden--is-signed_in"><a href="/features">IdentitySmart</a></li>
+              <li><a href="https://www.identity.com/about">About Us</a></li>
+              <li><a href="https://www.identity.com/blog" target="_blank">News &amp; Blog</a></li>
+              <li><a href="https://www.identity.com/developers">API</a></li>
+            </ul>
+          </div>
+          <div class="column-footer_nav support">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="https://www.identity.com/contact">Contact Us</a></li>
+              <li><a href="https://www.identity.com/faq">Help Center</a></li>
+              <li><a href="https://www.identity.com/legal/terms">Terms of Use</a></li>
+              <li><a href="https://www.identity.com/legal/privacy">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="column-6 u-ta-center--mobile u-ta-right--desktop">
+        <div class="u-display-inline-block">
+          <div class="u-ta-left--desktop">
+            <p class="footer-copyright">All rights reserved &copy; 2015 Identity.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+  <script src="../styleguide/public/js/styleguide.js"></script>
+  <script src="../public/js/id-bower.js"></script>
+
+
+
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=html"></script>
+  </body>
+</html>

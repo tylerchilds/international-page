@@ -1,0 +1,31 @@
+// Shapes
+//
+// Styleguide
+
+@mixin up-triangle($color, $height){
+  border-top: none;
+  border-left: $height solid transparent;
+  border-right: $height solid transparent;
+  border-bottom: $height solid $color;
+}
+
+@mixin down-triangle($color, $height){
+  border-bottom: none;
+  border-left: $height solid transparent;
+  border-right: $height solid transparent;
+  border-top: $height solid $color;
+}
+
+@mixin left-triangle($color, $height){
+  border-right: none;
+  border-bottom: $height solid transparent;
+  border-top: $height solid transparent;
+  border-left: $height solid $color;
+}
+
+@mixin right-triangle($color, $height){
+  border-left: none;
+  border-bottom: $height solid transparent;
+  border-top: $height solid transparent;
+  border-right: $height solid $color;
+}

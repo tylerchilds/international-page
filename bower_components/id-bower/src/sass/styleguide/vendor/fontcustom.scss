@@ -1,0 +1,16 @@
+$fc-font-path:        "../fonts" !default;
+$fc-version:          "1.1.0" !default;
+
+@font-face {
+  font-family: 'fontcustom';
+  src: url('#{$fc-font-path}/fontcustom.eot?v=#{$fc-version}');
+  src: url('#{$fc-font-path}/fontcustom.eot?#iefix&v=#{$fc-version}') format('embedded-opentype'),
+    url('#{$fc-font-path}/fontcustom.woff?v=#{$fc-version}') format('woff'),
+    url('#{$fc-font-path}/fontcustom.ttf?v=#{$fc-version}') format('truetype'),
+    url('#{$fc-font-path}/fontcustom.svg?v=#{$fc-version}#fontcustomregular') format('svg');
+//  src: url('#{$fc-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import 'custom-icons';

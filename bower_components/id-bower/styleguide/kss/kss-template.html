@@ -1,0 +1,17 @@
+{% extends '../html/templates/default.html' %}
+
+{% block head %}
+  <link href="../public/css/id-bower.css" rel="stylesheet" />
+  <link href="../styleguide/public/css/styleguide.css" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+
+INJECT_KSS_MARKUP
+
+{% endblock %}
+
+{% block foot %}
+  <script src="../styleguide/public/js/styleguide.js"></script>
+  <script src="../public/js/id-bower.js"></script>
+{% endblock %}

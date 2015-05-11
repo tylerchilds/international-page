@@ -1,0 +1,755 @@
+/*
+
+Form Elements
+
+Markup:
+<form class="form_pretty form_secure" style="margin-top: 20px;">
+  <label class="textfield">
+    <input type="text" />
+    <span class="textfield-label">First Name*</span>
+  </label>
+  <label class="textfield">
+    <input type="text" />
+    <span class="textfield-label">First Name*</span>
+  </label>
+  <label class="textfield">
+    <input type="text" />
+    <span class="textfield-label">First Name*</span>
+  </label>
+  <label class="checkbox">
+    <input type="checkbox" />
+    <span class="checkbox-label">Checkbox</span>
+  </label>
+  <input type="submit" />
+</form>
+
+Styleguide 3.0
+
+*/
+
+.form_pretty label{
+  margin-bottom: 10px;
+}
+
+.form_secure{
+  position: relative;
+}
+
+.form_secure:before,
+.form_secure:after{
+  position: absolute;
+  top: -20px;
+  left: 0;
+}
+
+.form_secure:before{
+  font-family:FontAwesome;
+  content:"\f023";
+  margin-right:7px;
+  font-size:19px;
+  color: $green;
+}
+
+.form_secure:after{
+  @include type--small();
+  font-weight:500;
+  color: $gray3;
+  content:"Secure form";
+  left: 20px;
+  margin-top: 2px;
+}
+
+/*
+
+Radio
+
+Markup:
+<label class="radio {{modifier_class}}">
+  <input type="radio" name="change1" checked/>
+  <span class="radio-label">Radio</span>
+</label>
+<label class="radio {{modifier_class}}">
+  <input type="radio" name="change1" />
+  <span class="radio-label">Radio</span>
+</label>
+
+.radio--block           - Radio buttons displayed as blocks, for grouping
+
+Styleguide 3.1.1
+
+*/
+
+.radio input[type=radio]{
+  position: absolute;
+  z-index: $z_index-0--underground;
+  opacity: 0;
+}
+
+.radio{
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding: 0 0 10px 30px;
+
+  @media (min-width: 768px){
+    display:inline-block;
+    padding-right: 20px;
+  }
+
+  &:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    border: 2px solid $gray4;
+    @include border-radius(20px);
+    background-color: #fff;
+    content: '';
+  }
+}
+
+.radio-label{
+  display: inline-block;
+  @include type--large();
+  padding-top: 3px;
+
+  &:before{
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    border: 1px solid $teal;
+    content: '';
+    @include border-radius(20px);
+  }
+}
+
+.radio input[type=radio]:focus + .radio-label:before{
+  visibility: visible;
+}
+
+.radio input[type=radio]:checked + .radio-label{
+  font-weight: 500;
+
+  &:after{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: $teal;
+    content: '';
+    @include border-radius(10px);
+  }
+}
+
+.radio--block{
+  padding: 10px 10px 10px 40px;
+  background-color: #fff;
+  border: 1px solid $gray6;
+  border-top: none;
+  display: block;
+}
+
+.radio--block:hover{
+  background-color: $gray7;
+}
+
+.radio--block:first-child {
+  border-top: 1px solid $gray6;
+}
+
+.radio--block--is_active{
+  background-color: $gray6;
+}
+
+.radio--block:before{
+  top: 50%;
+  margin-top: -10px;
+  left: 10px;
+}
+
+.radio--block .radio-label{
+  padding-top: 0;
+  @include type--normal();
+}
+
+.radio--block .radio-label:before{
+  top: 50%;
+  margin-top: -10px;
+  left: 10px;
+}
+
+.radio--block input[type=radio]:checked + .radio-label:after{
+  top: 50%;
+  margin-top: -5px;
+  left: 15px;
+}
+
+/*
+
+Checkbox
+
+Markup:
+<label class="checkbox">
+  <input type="checkbox" />
+  <span class="checkbox-label">Checkbox</span>
+</label>
+
+Styleguide 3.1.2
+
+*/
+
+.checkbox{
+  position: relative;
+  display: block;
+  cursor: pointer;
+  @include type--small();
+  padding: 2px 0 0 40px;
+}
+
+.checkbox input[type=checkbox]{
+  position: absolute;
+  z-index: $z_index-0--underground;
+  opacity: 0;
+}
+
+.checkbox .checkbox-label {
+  &:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    border: 2px solid $gray4;
+    @include border-radius(2px);
+    background-color: $white;
+    content: '';
+  }
+
+  &:after{
+    @include border-radius(2px);
+    @include icon();
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 14px;
+    width: 14px;
+    padding: 2px;
+    border: 1px solid transparent;
+    color: $teal-dark;
+    font-size: 14px;
+    content: '';
+  }
+}
+
+.checkbox .checkbox-label.red-checkbox:before{
+  border-color: $red;
+}
+
+.checkbox input[type=checkbox]:checked + .checkbox-label {
+  &:before{
+    border-color: $gray4;
+  }
+
+  &:after{
+    content: '\f00c';
+  }
+}
+
+.checkbox input[type=checkbox]:focus + .checkbox-label:after {
+  border-color: $teal;
+}
+
+.checkbox .validation{
+  right: auto;
+  left: 24px;
+  top: 2px;
+}
+
+.checkbox .validation--success{
+  display: none;
+}
+
+/*
+
+Input
+
+Markup:
+<label class="textfield {{modifier_class}}">
+  <input type="text" />
+  <span class="textfield-label">First Name*</span>
+</label>
+
+.textfield--with_icon           - Text field with an icon instead of label, just add in icon as a class on the label
+.textfield-label--is_active     - Active textfield label
+.textfield--label_bordered      - Textfield with border for displaying on backgrounds other than white.
+
+No Styleguide Reference
+
+*/
+
+/*
+
+Textarea
+
+Markup:
+<label class="textfield">
+  <textarea></textarea>
+  <span class="textfield-label">Message*</span>
+</label>
+
+.textfield--with_icon           - Text field with an icon instead of label
+.textfield-label--is_active     - Active textfield label
+.textfield--label_bordered      - Textfield with border for displaying on backgrounds other than white.
+
+No Styleguide Reference
+
+*/
+
+// space or padding from borders of form element
+$forms-space--vertical:     12px;
+$forms-space--horizontal:   10px;
+
+.textfield {
+  position: relative;
+  display: block;
+}
+
+.textfield:before {
+  position: absolute;
+  line-height: inherit;
+}
+
+.textfield input,
+.textfield textarea {
+  border: 1px solid $gray4;
+  border-radius: 2px;
+  padding: $forms-space--vertical $forms-space--horizontal+15px $forms-space--vertical $forms-space--horizontal;
+  width: 100%;
+  @include box-sizing(border-box); //need this here or somewhere else?
+  @include type--large();
+}
+
+.textfield textarea {
+  margin-bottom: -5px;
+}
+
+.textfield input:focus,
+.textfield textarea:focus {
+  outline: none;
+  border-color: $teal;
+}
+
+.textfield *:focus ~ .validation{
+  display: none;
+}
+
+.textfield-label {
+  position: absolute;
+  cursor: text;
+  top: $forms-space--vertical;
+  left: $forms-space--horizontal;
+  color: $gray4;
+  @include type--large();
+  @include transition-properties(top padding font-size opacity);
+}
+
+.textfield-label--is_active {
+  top: -($forms-space--vertical - 7px);
+  background-color: white;
+  padding: 0 5px; //for the white background
+  color: $gray3;
+  @include font-size(12px);
+  cursor: default;
+}
+
+.textfield--with_icon .textfield-label--is_active {
+  @include opacity(0);
+  overflow: hidden;
+  top: $forms-space--vertical;
+  padding: 0;
+  @include type--large();
+}
+
+.textfield--label_bordered .textfield-label--is_active{
+  border-top: 1px solid $gray4;
+}
+
+.textfield--label_bordered .textfield-label--is_active:before,
+.textfield--label_bordered .textfield-label--is_active:after{
+  position: absolute;
+  display: block;
+  height: 5px;
+  top: 0;
+  content: '';
+}
+
+.textfield--label_bordered .textfield-label--is_active:before{
+  border-left: 1px solid $gray4;
+  left: 0;
+}
+
+.textfield--label_bordered .textfield-label--is_active:after{
+  border-right: 1px solid $gray4;
+  right: 0;
+}
+
+.textfield--label_bordered input:focus + .textfield-label--is_active,
+.textfield--label_bordered textarea:focus + .textfield-label--is_active{
+  border-top-color: $teal;
+
+  &:before{
+    border-left-color: $teal;
+  }
+
+  &:after{
+    border-right-color: $teal;
+  }
+}
+
+.textfield--with_icon:before {
+  color: $gray4;
+  right: $forms-space--horizontal;
+  top: $forms-space--vertical;
+}
+
+.textfield--with_icon .validation{
+  right: $forms-space--horizontal + 25px;
+}
+
+/*
+
+Select
+the width of the selectmenu depends on the width of the original select element
+
+Markup:
+
+<label class="dropdown {{modifier_class}}">
+  <select name="speed" id="speed">
+    <option disabled="disabled" selected="selected">Select something please, quick!</option>
+    <option>Work It</option>
+    <option>Harder</option>
+    <option>Better</option>
+    <option>Faster</option>
+    <option>Stronger</option>
+    <option>More Than</option>
+    <option>Hour</option>
+    <option>Our</option>
+    <option>Never</option>
+    <option>Ever</option>
+    <option>After</option>
+    <option>Work is</option>
+    <option>Over</option>
+  </select>
+</label>
+
+.dropdown--with_label       - dropdown with a label on top
+.dropdown-label             - dropdown label
+
+No Styleguide Reference
+
+*/
+
+select { //the width of the selectmenu depends on the width of the original select element
+  width: 100%;
+  display: block !important;
+  z-index: $z_index-0--underground;
+  opacity: 0;
+  position: absolute;
+}
+
+.dropdown {
+  position: relative;
+  display: block;
+  margin-bottom: -5px;
+}
+
+.dropdown .validation{
+  right: $forms-space--horizontal + 15px;
+}
+
+.dropdown .validation--success{
+  display: none;
+}
+
+.dropdown-label {
+  color: $gray3;
+  padding-bottom: 5px;
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-label .validation{
+  top: 0;
+  right: -20px;
+}
+
+.dropdown .ui-selectmenu-menu {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  @include type--large();
+  z-index: $z-index-1;
+}
+
+.dropdown .ui-selectmenu-menu .ui-menu {
+  overflow: auto;
+  overflow-x: hidden;
+  padding-bottom: 1px;
+  background-color: white;
+  height: 140px;
+  right: 2px;
+  border: 1px solid $gray4;
+  text-align: left;
+}
+
+.dropdown .ui-selectmenu-menu .ui-menu li {
+  padding-left:  $forms-space--horizontal;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  cursor: pointer;
+
+  &.ui-state-focus {
+    background-color: $gray6;
+  }
+  &.ui-state-disabled {
+    color: $gray4;
+  }
+  &.ui-state-disabled.ui-state-focus {
+    background-color: white;
+  }
+}
+
+.dropdown .ui-selectmenu-open {
+  display: block;
+}
+
+.dropdown .ui-selectmenu-button {
+  display: inline-block;
+  overflow: visible;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid $gray4;
+  border-radius: 2px;
+  outline: none;
+  @include box-sizing(border-box);
+}
+
+.dropdown .ui-selectmenu-button.ui-state-focus {
+  border-color: $teal;
+}
+
+.dropdown .ui-selectmenu-button .ui-icon {
+  position: absolute;
+  right: $forms-space--horizontal;
+  left: auto;
+  top: 21%;
+  font-family: 'FontAwesome';
+}
+
+.dropdown .ui-selectmenu-button .ui-selectmenu-text {
+  text-align: left;
+  padding: $forms-space--vertical $forms-space--horizontal;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: $gray4;
+  background-color: $white;
+  @include type--large();
+}
+
+.dropdown .ui-selectmenu-button .ui-selectmenu-text--selected {
+  color: $gray1;
+}
+
+/*
+
+Validations
+
+Validation popovers
+
+Markup:
+<label class="textfield">
+  <input type="text" />
+  <div class="textfield-label">Validaton</div>
+  <div class="validation {{modifier_class}}">
+    <div class="validation-label">This is required</div>
+  </div>
+</label>
+
+.validation--error        - Error form element icon
+.validation--success      - Valid form element icon
+
+
+Styleguide 3.1.3
+
+*/
+
+.validation{
+  position: absolute;
+  right: $forms-space--horizontal;
+  top: $forms-space--vertical + 2px;
+}
+
+.validation:before{
+  @include icon();
+  @include border-radius(10px);
+  background-color: $white;
+}
+
+.validation-label{
+  position: absolute;
+  z-index: $z_index-4--error;
+  top: -3px;
+  right: 20px;
+  padding: 3px 8px;
+  background-color: $red;
+  color: $white;
+  white-space: nowrap;
+  display: none !important;
+  font-style: italic;
+  font-weight: 500;
+  @include type--small();
+  @include border-radius(2px);
+
+  @media (min-width: 768px){
+    left: 20px;
+    right: auto;
+  }
+}
+
+.validation-label:before{
+  @include left-triangle($red, 5px);
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  margin-top: -5px;
+  content: '';
+
+  @media (min-width: 768px){
+    @include right-triangle($red, 5px);
+    right: auto;
+    left: -5px;
+  }
+}
+
+.validation--error:before{
+  color: $red;
+  content: '\f06a';
+}
+
+.validation--error:hover .validation-label{
+  display: block !important;
+}
+
+
+.validation--success:before{
+  color: $green;
+  content: '\f058';
+}
+
+/*
+
+Validation Positions
+
+Positioning of validations
+
+Markup:
+<label class="textfield">
+  <input type="text" />
+  <div class="textfield-label">Validaton</div>
+  <div class="validation validation--error {{modifier_class}}">
+    <div class="validation-label">This is required</div>
+  </div>
+</label>
+
+.validation_hidden        - Hide validation icon
+.validation_right         - Validation label to the right
+.validation_left          - Validation label to the left
+
+Styleguide 3.1.4
+
+*/
+
+
+
+.validation_hidden.validation,
+.validation_hidden .validation{
+  display: none;
+}
+
+.validation_right .validation-label{
+  left: 20px;
+  right: auto;
+}
+
+.validation_right .validation-label:before{
+  @include right-triangle($red, 5px);
+  right: auto;
+  left: -5px;
+}
+
+.validation_left .validation-label{
+  right: 20px;
+  left: auto;
+}
+
+.validation_left .validation-label:before{
+  @include left-triangle($red, 5px);
+  left: auto;
+  right: -5px;
+}
+
+/*
+
+Error Class
+
+Styling inputs that have errors
+
+No Styleguide Reference
+
+*/
+
+.error.checkbox .checkbox-label:before{
+  border-color: $red;
+}
+
+.error.textfield input,
+.error.textfield textarea {
+  border-color: $red;
+   &:focus {
+    border-color: $red;
+  }
+}
+
+.error.textfield--label_bordered .textfield-label--is_active,
+.error.textfield--label_bordered .textfield-label--is_active,
+.error.textfield--label_bordered input:focus + .textfield-label--is_active,
+.error.textfield--label_bordered textarea:focus + .textfield-label--is_active{
+  border-top-color: $red;
+
+  &:before{
+    border-left-color: $red;
+  }
+
+  &:after{
+    border-right-color: $red;
+  }
+}
+
+.error.dropdown .ui-selectmenu-button {
+  border: 1px solid $red;
+}
+
+
+
+

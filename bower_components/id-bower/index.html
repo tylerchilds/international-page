@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js ie lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>iD Styleguide</title>
+    <meta name="keywords" content="pattern, library, styleguide, identity, inflection, baller css">
+    <meta name="description" content="A styleguide/pattern library for identity.com">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <meta name="apple-touch-fullscreen" content="yes">
+
+    
+        <link href="public/css/id-bower.css" rel="stylesheet" />
+        <link href="styleguide/public/css/styleguide.css" rel="stylesheet" />
+    
+  </head>
+  <body class="language-markup">
+
+    <a role="back-to-top" href="javascript:;" class="scroll_to_top js-scroll_to_top icon_box icon_box--gray fa-arrow-up"></a>
+
+ <header class="header">
+  <div class="header-container container container--small clearfix">
+
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="https://www.identity.com" class="header-logo" target="_blank"></a>
+      </div>
+
+      <div class="nav-right">
+        <div class="header-signed_in js-click-popover" data-id="js-popover-account_menu">
+          <div class="header-photo" style="background-image: url('http://fillmurray.com/g/45/45');">
+          </div>
+          <div class="draw draw--small draw--shield icon_attach icon_attach--small"></div>
+
+
+          <ul class="header-account_menu popover popover--right_below popover--menu" id="js-popover-account_menu">
+            <li>
+              <a href="/id-bower/" class="draw draw--shield draw--small">Styleguide</a>
+            </li>
+            <li>
+              <a href="/id-bower/docs">Documentation</a>
+            </li>
+            <li>
+              <a href="https://www.identity.com" target="_blank">Identity.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav-primary u-ta-center">
+        <div class="nav-toggle js-toggle-mobile_nav fa-caret-down">
+          Menu
+        </div>
+        <ul>
+          <li>
+            <a href="/id-bower/">Styleguide</a>
+          </li>
+          <li>
+            <a href="/id-bower/docs">Documentation</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <ul class="sub_nav js-sub_nav">
+    <li class="sub_nav-header u-ta-center">
+        <a href="/id-bower/" class="draw draw--shield draw--small">Styleguide</a>
+    </li>
+
+    <li>
+      <a href="/id-bower/docs/section-2.html">Buttons</a>
+    </li>
+    <li>
+      <a href="/id-bower/docs/section-3.html">Forms</a>
+    </li>
+    <li>
+      <a href="/id-bower/docs/section-4.html">Icons</a>
+    </li>
+    <li>
+      <a href="/id-bower/docs/section-8.html">Containers</a>
+    </li>
+    <li>
+      <a href="/id-bower/docs/section-9.html">Grid</a>
+    </li>
+  </ul>
+</header>
+<div id="notifications"></div>
+
+    <div class="main js-content container--large">
+        <div class="wrapper container container--large container--white">
+            
+  <div class="pattern">
+  <h2>Colors</h2>
+  <p class="subtitle pattern-description">
+    A collection of our branded colors
+  </p>
+  <section class="example">
+    <div class="example-demo">
+      <h3>Primary</h3>
+      <div class="color-cube teal"></div>
+      <div class="color-cube teal-dark"></div>
+
+      <h3>Secondary</h3>
+      <div class="color-cube green"></div>
+      <div class="color-cube yellow"></div>
+      <div class="color-cube red"></div>
+
+      <h3>Variations</h3>
+      <div class="color-cube teal-light"></div>
+      <div class="color-cube teal-medium"></div>
+      <div class="color-cube red-light"></div>
+      <div class="color-cube yellow-dark"></div>
+      <div class="color-cube yellow-light"></div>
+      <div class="color-cube teal-hover"></div>
+      <div class="color-cube red-hover"></div>
+
+      <h3>Grays</h3>
+      <div class="color-cube gray1"></div>
+      <div class="color-cube gray2"></div>
+      <div class="color-cube gray3"></div>
+      <div class="color-cube gray4"></div>
+      <div class="color-cube gray5"></div>
+      <div class="color-cube gray6"></div>
+      <div class="color-cube gray7"></div>
+      <div class="color-cube gray8"></div>
+      <div class="color-cube gray9"></div>
+    </div>
+  </section>
+</div>
+  
+
+<div class="pattern">
+  <h2>Icons</h2>
+  <p class="subtitle pattern-description">
+    FontAwesome icons are imported through bower and the fontcustom icons are compiled in the assets/fontcustom folder. <a href="http://fortawesome.github.io/Font-Awesome/icons/">View FontAwesome icons</a> or <a href="fontcustom.htm">View fontcustom icons</a>
+  </p>
+  <section class="example">
+    <div class="example-demo"></div>
+    <div class="example-code">
+      <xmp class="prettyprint">
+<i class="fa fa-bed"></i>
+<i class="fa customicon-iDmembers"></i>
+      </xmp>
+    </div>
+    <div class="example-toggle"></div>
+  </section>
+</div>
+
+<div class="pattern">
+  <h2>Social Media Icons</h2>
+  <p class="subtitle pattern-description">
+    Font Custom icons are compiled in the assets/fontcustom folder
+  </p>
+  <section class="example">
+    <div class="example-demo"></div>
+    <div class="example-code">
+      <xmp class="prettyprint">
+<span class="icon customicon-facebook"></span>
+<span class="icon customicon-twitter"></span>
+<span class="icon customicon-linkedin"></span>
+<span class="icon customicon-github"></span>
+<span class="icon customicon-googleplus"></span>
+<span class="icon customicon-blogger"></span>
+<span class="icon customicon-vimeo"></span>
+<span class="icon customicon-flickr"></span>
+<span class="icon customicon-instagram"></span>
+<span class="icon customicon-youtube"></span>
+<span class="icon customicon-etsy"></span>
+<span class="icon customicon-foursquare"></span>
+<span class="icon customicon-wordpress"></span>
+<span class="icon customicon-runkeeper"></span>
+<span class="icon customicon-soundcloud"></span>
+<span class="icon customicon-reddit"></span>
+
+<hr>
+
+<span class="icon icon--is_not-active customicon-facebook"></span>
+<span class="icon icon--is_not-active customicon-twitter"></span>
+<span class="icon icon--is_not-active customicon-linkedin"></span>
+<span class="icon icon--is_not-active customicon-github"></span>
+<span class="icon icon--is_not-active customicon-googleplus"></span>
+<span class="icon icon--is_not-active customicon-blogger"></span>
+<span class="icon icon--is_not-active customicon-vimeo"></span>
+<span class="icon icon--is_not-active customicon-flickr"></span>
+<span class="icon icon--is_not-active customicon-instagram"></span>
+<span class="icon icon--is_not-active customicon-youtube"></span>
+<span class="icon icon--is_not-active customicon-etsy"></span>
+<span class="icon icon--is_not-active customicon-foursquare"></span>
+<span class="icon icon--is_not-active customicon-wordpress"></span>
+<span class="icon icon--is_not-active customicon-runkeeper"></span>
+<span class="icon icon--is_not-active customicon-soundcloud"></span>
+<span class="icon icon--is_not-active customicon-reddit"></span>
+
+<hr>
+
+<span class="icon_button icon_button--is_not-active customicon-facebook">Connect</span>
+<span class="icon_button icon_button--is_not-active customicon-twitter">Connect</span>
+<span class="icon_button icon_button--is_not-active customicon-linkedin">Connect</span>
+<span class="icon_button icon_button--is_not-active customicon-github">Connect</span>
+<span class="icon_button icon_button--is_not-active customicon-googleplus">Connect</span>
+<span class="icon_button icon_button--is_not-active customicon-blogger">Connect</span>
+<span class="icon_button icon_button--is_not-active customicon-vimeo">Connect</span>
+<span class="icon_button icon_button--is_not-active customicon-flickr">Connect</span>
+<span class="icon_button icon_button--is_not-active customicon-instagram">Connect</span>
+<span class="icon_button icon_button--is_not-active customicon-youtube">Connect</span>
+<span class="icon_button icon_button--is_not-active customicon-etsy">Connect</span>
+<span class="icon_button icon_button--is_not-active customicon-foursquare">Connect</span>
+<span class="icon_button icon_button--is_not-active customicon-wordpress">Connect</span>
+<span class="icon_button icon_button--is_not-active customicon-runkeeper">Connect</span>
+<span class="icon_button icon_button--is_not-active customicon-soundcloud">Connect</span>
+<span class="icon_button icon_button--is_not-active customicon-reddit">Connect</span>
+
+<hr>
+
+<span class="icon_button icon_button--large customicon-facebook">Connect</span>
+<span class="icon_button icon_button--large customicon-twitter">Connect</span>
+<span class="icon_button icon_button--large customicon-linkedin">Connect</span>
+<span class="icon_button icon_button--large customicon-github">Connect</span>
+<span class="icon_button icon_button--large customicon-googleplus">Connect</span>
+<span class="icon_button icon_button--large customicon-blogger">Connect</span>
+<span class="icon_button icon_button--large customicon-vimeo">Connect</span>
+<span class="icon_button icon_button--large customicon-flickr">Connect</span>
+<span class="icon_button icon_button--large customicon-instagram">Connect</span>
+<span class="icon_button icon_button--large customicon-youtube">Connect</span>
+<span class="icon_button icon_button--large customicon-etsy">Connect</span>
+<span class="icon_button icon_button--large customicon-foursquare">Connect</span>
+<span class="icon_button icon_button--large customicon-wordpress">Connect</span>
+<span class="icon_button icon_button--large customicon-runkeeper">Connect</span>
+<span class="icon_button icon_button--large customicon-soundcloud">Connect</span>
+<span class="icon_button icon_button--large customicon-reddit">Connect</span>
+
+      </xmp>
+    </div>
+    <div class="example-toggle"></div>
+  </section>
+</div>
+
+  <div class="pattern">
+  <h2>Grid</h2>
+  <p class="subtitle pattern-description">
+    An updated version of the media box.
+  </p>
+  <section class="example">
+    <div class="example-demo"></div>
+    <div class="example-code">
+      <xmp class="prettyprint">
+<div class="grid">
+  <div class="column-4">
+    First
+  </div>
+  <div class="column-4">
+    Middle
+  </div>
+  <div class="column-4">
+    Last
+  </div>
+</div>
+      </xmp>
+    </div>
+    <div class="example-toggle"></div>
+  </section>
+</div>
+
+<div class="pattern">
+  <h2>Grid Modifiers</h2>
+  <p class="subtitle pattern-description">
+    Reversed, no gutter and stacked on mobile. Small gutters.
+  </p>
+  <section class="example">
+    <div class="example-demo"></div>
+    <div class="example-code">
+      <xmp class="prettyprint">
+<div class="grid grid--reverse grid--no_gutter grid--collapse">
+  <div class="column-4">
+    First
+  </div>
+  <div class="column-4">
+    Middle
+  </div>
+  <div class="column-4">
+    Last
+  </div>
+</div>
+
+<div class="grid grid--gutter_small">
+  <div class="column-4">
+    First
+  </div>
+  <div class="column-4">
+    Middle
+  </div>
+  <div class="column-4">
+    Last
+  </div>
+</div>
+      </xmp>
+    </div>
+    <div class="example-toggle"></div>
+  </section>
+</div>
+
+
+<div class="pattern">
+  <h2>Column Modifiers</h2>
+  <p class="subtitle pattern-description">
+    Alignment, offsets and fixed widths
+  </p>
+  <section class="example">
+    <div class="example-demo example-alignment"></div>
+    <div class="example-code">
+      <xmp class="prettyprint">
+<div class="grid">
+  <div class="column-4 column--left column--bottom">
+    Left Bottom
+  </div>
+  <div class="column-4 column--right column--middle">
+    Right Middle
+  </div>
+  <div class="column-4 column--top column--center">
+    Top Center
+  </div>
+</div>
+
+<div class="grid grid--gutter_small">
+  <div class="column-4 column--push-8">
+    Pushed
+  </div>
+  <div class="column-8 column--pull-4">
+    Pulled
+  </div>
+</div>
+
+<div class="grid grid--collapse grid--reverse">
+  <div class="column--fixed-100">
+    Fixed Left
+  </div>
+  <div class="column-12 column--left-100 column--right-100">
+    Sharing Fixed elements
+  </div>
+  <div class="column--fixed-100">
+    Fixed Right
+  </div>
+</div>
+      </xmp>
+    </div>
+    <div class="example-toggle"></div>
+  </section>
+</div>
+  <div class="pattern">
+  <h2>Forms and Validation</h2>
+  <p class="subtitle pattern-description">
+    Demonstrating form elements and majestic validation
+  </p>
+
+  <section class="example">
+    <div class="example-demo"></div>
+    <div class="example-code">
+      <xmp class="prettyprint">
+<form class="form_pretty">
+  <div class="grid grid--gutter_small grid--collapse">
+    <div class="column-4">
+      <label class="textfield textfield--label_bordered">
+        <input type="text" name="fullname" validation="required" />
+        <span class="textfield-label">Full Name</span>
+      </label>
+    </div>
+
+    <div class="column-4">
+      <label class="textfield textfield--with_icon fa-envelope">
+        <input type="text" name="email" id="email" validation="required" />
+        <span class="textfield-label">Email</span>
+      </label>
+    </div>
+    <div class="column-4">
+      <label class="dropdown">
+        <select name="number" id="number" validation="required">
+          <option disabled="disabled" selected="selected">Number</option>
+          <option>01</option>
+          <option>02</option>
+          <option>03</option>
+          <option>04</option>
+          <option>05</option>
+          <option>06</option>
+          <option>07</option>
+          <option>08</option>
+          <option>09</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+        </select>
+      </label>
+    </div>
+  </div>
+
+  <div class="grid grid--gutter_small grid--collapse">
+    <div class="column-4 column--bottom">
+      <label class="dropdown validation_right" data-validation-placement="birthday-label">
+        <span class="dropdown-label" id="birthday-label">Birthday</span>
+        <select name="day" id="day" validation="required">
+          <option disabled="disabled" selected="selected">Day</option>
+          <option>01</option>
+          <option>02</option>
+          <option>03</option>
+          <option>04</option>
+          <option>05</option>
+          <option>06</option>
+          <option>07</option>
+          <option>08</option>
+          <option>09</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="column-4 column--bottom">
+      <label class="dropdown" data-validation-placement="birthday-label">
+        <select name="month" id="month" validation="required">
+          <option disabled="disabled" selected="selected">Month</option>
+          <option>01</option>
+          <option>02</option>
+          <option>03</option>
+          <option>04</option>
+          <option>05</option>
+          <option>06</option>
+          <option>07</option>
+          <option>08</option>
+          <option>09</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="column-4 column--bottom">
+      <label class="dropdown" data-validation-placement="birthday-label">
+        <select name="year" id="year" validation="required">
+          <option disabled="disabled" selected="selected">Year</option>
+          <option>01</option>
+          <option>02</option>
+          <option>03</option>
+          <option>04</option>
+          <option>05</option>
+          <option>06</option>
+          <option>07</option>
+          <option>08</option>
+          <option>09</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+        </select>
+      </label>
+    </div>
+  </div>
+
+  <label class="textfield">
+    <textarea name="comments" validation="required"></textarea>
+    <span class="textfield-label">Comments</span>
+  </label>
+
+  <label class="checkbox">
+    <input type="checkbox" name="terms" value="yes" validation="checkbox" />
+    <span class="checkbox-label">Checkbox</span>
+  </label>
+
+  <input type="submit" class="btn" />
+</form>
+      </xmp>
+    </div>
+    <div class="example-toggle"></div>
+  </section>
+</div>
+  <div class="pattern">
+  <h2>Notifications</h2>
+  <p class="subtitle pattern-description">
+   Modal that
+  </p>
+
+  <section class="example">
+    <div class="example-demo"></div>
+    <div class="example-code">
+      <xmp class="prettyprint">
+<div class="notification notification--feedback">
+  <div class="notification-content">We've sent you an email   <a href="#" class="link--text">Link</a>
+  </div>
+</div>
+
+<div class="notification notification--warning">
+  <div class="notification-content">
+    <div class="grid">
+      <div class="column-8 column--middle">
+      Are you sure you want to close?
+      </div>
+      <div class="column-4 column--middle column--right">
+        <button class="btn--small btn--outline btn--warn">Don't Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+      </xmp>
+    </div>
+    <div class="example-toggle"></div>
+  </section>
+</div>
+  <div class="pattern">
+  <h2>Kit modal</h2>
+  <p class="subtitle pattern-description">
+   Modal that
+  </p>
+
+  <section class="example">
+    <div class="example-demo"></div>
+    <div class="example-code">
+      <xmp class="prettyprint">
+<div class="overlay" id="modal-one">
+  <div class="modal">
+    <span class="close js-close-modal" data-id="modal-one"></span>
+    <h3>Modal Title</h3>
+    <p>Modal Description</p>
+  </div>
+</div>
+
+<button class="js-show-modal" data-id="modal-one">Show Modal 1</button>
+      </xmp>
+    </div>
+    <div class="example-toggle"></div>
+  </section>
+</div>
+
+<div class="pattern">
+  <h2>Kit tabs</h2>
+  <p class="subtitle pattern-description">
+   Simple tab navigation for showing/hiding content
+  </p>
+
+  <section class="example">
+    <div class="example-demo"></div>
+    <div class="example-code">
+      <xmp class="prettyprint">
+<div class="tabs" id="js-group-1">
+  <div class="tabs-toggle js-toggle-tab tabs-toggle--is_active" data-id="tab-one">
+    Tab One
+  </div>
+  <div class="tabs-toggle js-toggle-tab" data-id="tab-two">
+    Tab Two
+  </div>
+</div>
+<div class="js-group-1">
+  <div class="tabs-content js-tabs-content tabs-content--is_active" id="tab-one">
+    Tab One
+  </div>
+  <div class="tabs-content js-tabs-content" id="tab-two">
+    Tab Two
+  </div>
+</div>
+      </xmp>
+    </div>
+    <div class="example-toggle"></div>
+  </section>
+</div>
+
+<div class="pattern">
+  <h2>Kit Accordion</h2>
+  <p class="subtitle pattern-description">
+   Simple accordion for toggling content
+  </p>
+
+  <section class="example">
+    <div class="example-demo"></div>
+    <div class="example-code">
+      <xmp class="prettyprint">
+<div class="accordion js-toggle-accordion" data-id="js-accordion-1">
+  Toggle Accordion 1
+</div>
+<div class="accordion_content" id="js-accordion-1">
+  Accordion 1 Content
+</div>
+<div class="accordion accordion--is_last js-toggle-accordion" data-id="js-accordion-2">
+  Toggle Accordion 2
+</div>
+<div class="accordion_content" id="js-accordion-2">
+  Accordion 2 Content
+</div>
+      </xmp>
+    </div>
+    <div class="example-toggle"></div>
+  </section>
+</div>
+
+<div class="pattern">
+  <h2>Kit Popover</h2>
+  <p class="subtitle pattern-description">
+   Simple popover that will display on hover
+  </p>
+
+  <section class="example">
+    <div class="example-demo"></div>
+    <div class="example-code">
+      <xmp class="prettyprint">
+<div class="popover_parent js-hover-popover" data-id="js-popover-1">
+  <i class="fa fa-question-circle"></i>
+  <div class="popover popover--tooltip popover--below" id="js-popover-1">
+    The quick brown fox jumped over the lazy dog, so quickly.
+  </div>
+</div>
+
+<div class="popover_parent js-click-popover" data-id="js-popover-2">
+  <a href="javascript:;">Click Popover</a>
+  <div class="popover popover--tooltip popover--below" id="js-popover-2">
+    The quick brown fox jumped over the lazy dog, so quickly.
+  </div>
+</div>
+      </xmp>
+    </div>
+    <div class="example-toggle"></div>
+  </section>
+</div>
+
+  <div class="pattern">
+  <h2>Typography</h2>
+  <p class="subtitle pattern-description">
+    Connected Elements
+  </p>
+
+  <section class="example">
+    <div class="example-demo"></div>
+    <div class="example-code">
+      <xmp class="prettyprint">
+<div class="type type--hero">
+  <h1>Landing page hero</h1>
+  <p class="subtitle">Landing page hero subtitle</p>
+</div>
+
+<hr />
+
+<div class="type type--hero">
+  <h2>Subpage hero</h2>
+  <p class="subtitle">Subpage hero subtitle</p>
+</div>
+
+<hr />
+
+<div class="type type--description">
+  <h2>Landing page description</h2>
+  <p class="subtitle">Landing page description subtitle</p>
+</div>
+
+<hr />
+
+<div class="type type--description">
+  <h3>Subpage description</h3>
+  <p class="subtitle">Subpage description subtitle</p>
+</div>
+
+<hr />
+
+<div class="type type--quote container--large container--tight_y">
+  <p class="type--quote-body">
+    Check your credit report for new accounts that you did not open.Are there charges to your credit card that you did not authorize? Have collection agencies contacted you about unpaid bills thatdon’t belong to you? You may be the victim of identity theft.
+  </p>
+  <p class="type--quote-attribution">
+    -Lisa Verano, San Francisco
+  </p>
+</div>
+      </xmp>
+    </div>
+    <div class="example-toggle"></div>
+  </section>
+</div>
+
+  <div class="pattern">
+  <h2>Modules</h2>
+  <p class="subtitle pattern-description">
+    Styleguide elements can be tied together very naturally. Below are a couple of beautiful examples.
+  </p>
+
+  <section class="example">
+    <div class="example-demo"></div>
+    <div class="example-code">
+      <xmp class="prettyprint">
+<div class="container container--teal">
+  <div class="wrapper wrapper--padded">
+    <div class="type type--white type--hero u-ta-center">
+      <h1>Welcome to the Jungle</h1>
+      <p class="subtitle">I guess you could say it's getting pretty serious.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="wrapper">
+    <div class="container container--tight container--white container--bordered">
+      <div class="icon_header icon_header--large fa-envelope">
+        Email
+      </div>
+      <div class="container">
+        <div class="grid">
+          <div class="column-6 column--middle">
+            <p>Share your email?</p>
+          </div>
+          <div class="column-6 column--middle column--right">
+            <button>Yes</button>
+            <button class="btn--secondary">Nah</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      </xmp>
+    </div>
+    <div class="example-toggle"></div>
+  </section>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer js-footer container container--large container--gray8 ">
+  <div class="footer-nav wrapper">
+    <div class="grid grid--collapse">
+      <div class="column-6">
+        <div class="grid grid--no_gutter">
+          <div class="column-footer_nav explore">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="https://www.identity.com/">Home</a></li>
+              <li class="u-hidden--is-signed_out"><a href="/identitysmart/dashboard">IdentitySmart</a></li>
+              <li class="u-hidden--is-signed_in"><a href="/features">IdentitySmart</a></li>
+              <li><a href="https://www.identity.com/about">About Us</a></li>
+              <li><a href="https://www.identity.com/blog" target="_blank">News &amp; Blog</a></li>
+              <li><a href="https://www.identity.com/developers">API</a></li>
+            </ul>
+          </div>
+          <div class="column-footer_nav support">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="https://www.identity.com/contact">Contact Us</a></li>
+              <li><a href="https://www.identity.com/faq">Help Center</a></li>
+              <li><a href="https://www.identity.com/legal/terms">Terms of Use</a></li>
+              <li><a href="https://www.identity.com/legal/privacy">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="column-6 u-ta-center--mobile u-ta-right--desktop">
+        <div class="u-display-inline-block">
+          <div class="u-ta-left--desktop">
+            <p class="footer-copyright">All rights reserved &copy; 2015 Identity.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+        <script src="styleguide/public/js/styleguide.js"></script>
+        <script src="public/js/id-bower.js"></script>
+    
+
+
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=html"></script>
+  </body>
+</html>

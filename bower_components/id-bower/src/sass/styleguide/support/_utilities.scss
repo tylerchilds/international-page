@@ -1,0 +1,151 @@
+// Utility classes
+//
+// Styleguide
+
+.u-f-none{
+  float: none;
+}
+
+.u-f-none--mobile{
+  @media (max-width: 767px){
+    float: none;
+  }
+}
+
+.u-f-left{
+  float: left;
+}
+
+.u-f-right{
+  float: right;
+}
+
+.u-fixed{
+  position: absolute;
+}
+
+.u-absolute{
+  position: absolute;
+}
+
+.u-relative{
+  position: relative;
+}
+
+.u-static{
+  position: static;
+}
+
+.u-clearfix{
+  overflow: hidden;
+  clear: both;
+}
+
+.u-ta-left{
+  text-align: left;
+}
+
+.u-ta-center{
+  text-align: center;
+}
+
+.u-ta-right{
+  text-align: right;
+}
+
+.u-ta-left--mobile{
+  @media (max-width: 767px){
+    text-align: left;
+  }
+}
+
+.u-ta-center--mobile{
+  @media (max-width: 767px){
+    text-align: center;
+  }
+}
+
+.u-ta-right--mobile{
+  @media (max-width: 767px){
+    text-align: right;
+  }
+}
+
+.u-ta-left--desktop{
+  @media (min-width: 768px){
+    text-align: left;
+  }
+}
+
+.u-ta-center--desktop{
+  @media (min-width: 768px){
+    text-align: center;
+  }
+}
+
+.u-ta-right--desktop{
+  @media (min-width: 768px){
+    text-align: right;
+  }
+}
+
+.u-hidden{
+  display: none !important;
+}
+
+.u-hidden--desktop{
+  @media (min-width: 768px){
+    display: none !important;
+  }
+}
+
+.u-hidden--mobile{
+  @media (max-width: 767px){
+    display: none !important;
+  }
+}
+
+.u-visible{
+  display: block;
+}
+
+.u-visible--desktop{
+  @media (min-width: 768px){
+    display: block;
+  }
+}
+
+.u-visible--mobile{
+  @media (max-width: 767px){
+    display: block;
+  }
+}
+
+.u-fs-italic{
+  font-style: italic;
+}
+
+.u-font-smoothing{
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.u-appearance-none{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.u-no-scroll{
+  overflow: hidden;
+}
+
+.u-disabled{
+  opacity:0.5;
+  pointer-events:none;
+}
+
+.u-display-inline-block{
+  display: inline-block;
+}

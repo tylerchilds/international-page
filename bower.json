@@ -1,0 +1,20 @@
+{
+  "name": "international-page",
+  "version": "0.1.0",
+  "homepage": "www.identity.com",
+  "authors": [
+    "Tyler Childs <tylerwchilds@gmail.com>"
+  ],
+  "description": "International Page for identity.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "id-bower": "git@github.com:identity-dev/id-bower.git#~>0.1.0"
+  }
+}

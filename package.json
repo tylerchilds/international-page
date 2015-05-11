@@ -1,0 +1,40 @@
+{
+  "name": "international-page",
+  "author": "Tyler Childs",
+  "contributors": [
+    "Tyler Childs <tylerwchilds@gmail.com>"
+  ],
+  "description": "International Page identity.com",
+  "homepage": "http://www.identity.com",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/identity-dev/international-page.git"
+  },
+  "devDependencies": {
+    "bower": "latest",
+    "dotenv": "latest",
+    "gulp": "latest",
+    "gulp-clean": "latest",
+    "gulp-compass": "latest",
+    "gulp-concat": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-include": "latest",
+    "gulp-jasmine": "^1.0.1",
+    "gulp-jshint": "latest",
+    "gulp-livereload": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-preprocess": "^1.2.0",
+    "gulp-rename": "latest",
+    "gulp-swig": "latest",
+    "gulp-uglify": "latest",
+    "gulp-util": "latest",
+    "gulp-yaml": "latest",
+    "imagemin-pngquant": "latest",
+    "jasmine": "^2.1.0",
+    "jasmine-jquery": "^2.0",
+    "sinon": "^1.12.1",
+    "minimist": "latest",
+    "run-sequence": "latest"
+  }
+}

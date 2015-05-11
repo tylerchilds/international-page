@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js ie lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>iD Styleguide</title>
+    <meta name="keywords" content="pattern, library, styleguide, identity, inflection, baller css">
+    <meta name="description" content="A styleguide/pattern library for identity.com">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <meta name="apple-touch-fullscreen" content="yes">
+
+    
+  <link href="../public/css/id-bower.css" rel="stylesheet" />
+  <link href="../styleguide/public/css/styleguide.css" rel="stylesheet" />
+
+  </head>
+  <body class="language-markup">
+
+    <a role="back-to-top" href="javascript:;" class="scroll_to_top js-scroll_to_top icon_box icon_box--gray fa-arrow-up"></a>
+
+ <header class="header">
+  <div class="header-container container container--small clearfix">
+
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="https://www.identity.com" class="header-logo" target="_blank"></a>
+      </div>
+
+      <div class="nav-right">
+        <div class="header-signed_in js-click-popover" data-id="js-popover-account_menu">
+          <div class="header-photo" style="background-image: url('http://fillmurray.com/g/45/45');">
+          </div>
+          <div class="draw draw--small draw--shield icon_attach icon_attach--small"></div>
+
+
+          <ul class="header-account_menu popover popover--right_below popover--menu" id="js-popover-account_menu">
+            <li>
+              <a href="/id-bower/" class="draw draw--shield draw--small">Styleguide</a>
+            </li>
+            <li>
+              <a href="/id-bower/docs">Documentation</a>
+            </li>
+            <li>
+              <a href="https://www.identity.com" target="_blank">Identity.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav-primary u-ta-center">
+        <div class="nav-toggle js-toggle-mobile_nav fa-caret-down">
+          Menu
+        </div>
+        <ul>
+          <li>
+            <a href="/id-bower/">Styleguide</a>
+          </li>
+          <li>
+            <a href="/id-bower/docs">Documentation</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <ul class="sub_nav js-sub_nav">
+    <li class="sub_nav-header u-ta-center">
+        <a href="/id-bower/" class="draw draw--shield draw--small">Styleguide</a>
+    </li>
+
+    <li>
+      <a href="/id-bower/docs/section-2.html">Buttons</a>
+    </li>
+    <li>
+      <a href="/id-bower/docs/section-3.html">Forms</a>
+    </li>
+    <li>
+      <a href="/id-bower/docs/section-4.html">Icons</a>
+    </li>
+    <li>
+      <a href="/id-bower/docs/section-8.html">Containers</a>
+    </li>
+    <li>
+      <a href="/id-bower/docs/section-9.html">Grid</a>
+    </li>
+  </ul>
+</header>
+<div id="notifications"></div>
+
+    <div class="main js-content container--large">
+        <div class="wrapper container container--large container--white">
+            
+
+<div class="gap gap--large nav_kss">
+  <ul class="container container--bordered container--white">
+  <!--       <a href="#">
+          <h4 class="u-disabled">Icons</h4>
+        </a> -->
+        <!-- <a href="#4.1">4.1Circle icon that displays a social network from the custom icon library</a> -->
+        <!-- <a href="#4.2">4.2Icon Buttons</a> -->
+        <!-- <a href="#4.3">4.3Icon Headers</a> -->
+        <!-- <a href="#4.4">4.4Number Bubble Icons</a> -->
+        <!-- <a href="#4.4">4.4Icon List</a> -->
+        <!-- <a href="#4.5">4.5Icon Box</a> -->
+        <!-- <a href="#4.6">4.6Draw icons</a> -->
+        <!-- <a href="#4.7">4.7Icon Attach</a> -->
+    <li><a href="./index.html">Home</a></li>
+      <li>
+        <a href="section-1.html"><!--1.0: -->Typography</a>
+      </li>
+      <li>
+        <a href="section-2.html"><!--2.0: -->Buttons</a>
+      </li>
+      <li>
+        <a href="section-3.html"><!--3.0: -->Form Elements</a>
+      </li>
+      <li>
+        <a href="section-4.html"><!--4.0: -->Icons</a>
+      </li>
+      <li>
+        <a href="section-5.html"><!--5.0: -->Notifications</a>
+      </li>
+      <li>
+        <a href="section-6.html"><!--6.0: -->Kit</a>
+      </li>
+      <li>
+        <a href="section-7.html"><!--7.0: -->Type</a>
+      </li>
+      <li>
+        <a href="section-8.html"><!--8.0: -->Containers</a>
+      </li>
+      <li>
+        <a href="section-9.html"><!--9.0: -->Grid</a>
+      </li>
+  </ul>
+</div>
+
+
+
+
+
+      <article class="pattern">
+          <h2 id="4">Icons</h2>
+          <div class="subtitle pattern-description"><p>Icons applied to components</p>
+</div>
+      </article>
+      <article class="pattern">
+          <h2 class="kss-title" id="4.1">
+            <span class="kss-ref badge pull-right">4.1</span> Circle icon that displays a social network from the custom icon library
+          </h2>
+          <section class="example">
+            <div class="example-demo">
+              <div class="kss-example"><span class="icon customicon-github "></span></div>
+                <hr />
+                <h4>inactive icon state <span class="u-f-right"><code>.icon--is_not-active</code></span></h4>
+                <div class="kss-example"><span class="icon customicon-github icon--is_not-active"></span></div>
+                <hr />
+                <h4>no hover state <span class="u-f-right"><code>.icon--no_hover</code></span></h4>
+                <div class="kss-example"><span class="icon customicon-github icon--no_hover"></span></div>
+            </div>
+            <div class="example-code">
+<pre class="prettyprint no-copy">&lt;span class=&quot;icon customicon-github &quot;&gt;&lt;/span&gt;</pre>
+            </div>
+            <div class="example-toggle"></div>
+          </section>
+      </article>
+      <article class="pattern">
+          <h2 class="kss-title" id="4.2">
+            <span class="kss-ref badge pull-right">4.2</span> Icon Buttons
+          </h2>
+          <div class="subtitle pattern-description"><p>Icon button that displays a social network from the custom icon library</p>
+</div>
+          <section class="example">
+            <div class="example-demo">
+              <div class="kss-example"><span class="icon_button customicon-github ">Connect</span></div>
+                <hr />
+                <h4>inactive icon button state <span class="u-f-right"><code>.icon_button--is_not-active</code></span></h4>
+                <div class="kss-example"><span class="icon_button customicon-github icon_button--is_not-active">Connect</span></div>
+                <hr />
+                <h4>no hover state <span class="u-f-right"><code>.icon_button--no_hover</code></span></h4>
+                <div class="kss-example"><span class="icon_button customicon-github icon_button--no_hover">Connect</span></div>
+            </div>
+            <div class="example-code">
+<pre class="prettyprint no-copy">&lt;span class=&quot;icon_button customicon-github &quot;&gt;Connect&lt;/span&gt;</pre>
+            </div>
+            <div class="example-toggle"></div>
+          </section>
+      </article>
+      <article class="pattern">
+          <h2 class="kss-title" id="4.3">
+            <span class="kss-ref badge pull-right">4.3</span> Icon Headers
+          </h2>
+          <div class="subtitle pattern-description"><p>Icon attached to a header</p>
+</div>
+          <section class="example">
+            <div class="example-demo">
+              <div class="kss-example"><div class="icon_header fa-envelope ">
+  Social Profiles
+</div></div>
+                <hr />
+                <h4>Large icon header <span class="u-f-right"><code>.icon_header--large</code></span></h4>
+                <div class="kss-example"><div class="icon_header fa-envelope icon_header--large">
+  Social Profiles
+</div></div>
+            </div>
+            <div class="example-code">
+<pre class="prettyprint no-copy">&lt;div class=&quot;icon_header fa-envelope &quot;&gt;
+  Social Profiles
+&lt;/div&gt;</pre>
+            </div>
+            <div class="example-toggle"></div>
+          </section>
+      </article>
+      <article class="pattern">
+          <h3 class="kss-title" id="4.3.1">
+            <span class="kss-ref badge pull-right">4.3.1</span> Icon Header with small text
+          </h3>
+          <section class="example">
+            <div class="example-demo">
+              <div class="kss-example"><div class="icon_header icon_header--large customicon-phone ">
+  Social Profiles
+  <small>With Social Networks</small>
+</div></div>
+            </div>
+            <div class="example-code">
+<pre class="prettyprint no-copy">&lt;div class=&quot;icon_header icon_header--large customicon-phone &quot;&gt;
+  Social Profiles
+  &lt;small&gt;With Social Networks&lt;/small&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <div class="example-toggle"></div>
+          </section>
+      </article>
+      <article class="pattern">
+          <h2 class="kss-title" id="4.4">
+            <span class="kss-ref badge pull-right">4.4</span> Number Bubble Icons
+          </h2>
+          <div class="subtitle pattern-description"><p>Usually used together with an image to number &quot;steps&quot;. Default color is gray2, default position is top left.</p>
+</div>
+          <section class="example">
+            <div class="example-demo">
+              <div class="kss-example"><ul class="icon_list ">
+  <li class="icon_list-li customicon-Check_mark_icon">Valid</li>
+  <li class="icon_list-li fa-lock">Locked</li>
+</ul></div>
+                <hr />
+                <h4>bottom right <span class="u-f-right"><code>.bubble--bottom_right</code></span></h4>
+                <div class="kss-example"><ul class="icon_list bubble--bottom_right">
+  <li class="icon_list-li customicon-Check_mark_icon">Valid</li>
+  <li class="icon_list-li fa-lock">Locked</li>
+</ul></div>
+                <hr />
+                <h4>top right <span class="u-f-right"><code>.bubble--top_right</code></span></h4>
+                <div class="kss-example"><ul class="icon_list bubble--top_right">
+  <li class="icon_list-li customicon-Check_mark_icon">Valid</li>
+  <li class="icon_list-li fa-lock">Locked</li>
+</ul></div>
+                <hr />
+                <h4>bottom left <span class="u-f-right"><code>.bubble--bottom_left</code></span></h4>
+                <div class="kss-example"><ul class="icon_list bubble--bottom_left">
+  <li class="icon_list-li customicon-Check_mark_icon">Valid</li>
+  <li class="icon_list-li fa-lock">Locked</li>
+</ul></div>
+            </div>
+            <div class="example-code">
+<pre class="prettyprint no-copy">&lt;ul class=&quot;icon_list &quot;&gt;
+  &lt;li class=&quot;icon_list-li customicon-Check_mark_icon&quot;&gt;Valid&lt;/li&gt;
+  &lt;li class=&quot;icon_list-li fa-lock&quot;&gt;Locked&lt;/li&gt;
+&lt;/ul&gt;</pre>
+            </div>
+            <div class="example-toggle"></div>
+          </section>
+      </article>
+      <article class="pattern">
+          <h2 class="kss-title" id="4.4">
+            <span class="kss-ref badge pull-right">4.4</span> Icon List
+          </h2>
+          <div class="subtitle pattern-description"><p>Lists with icons as bullets</p>
+</div>
+          <section class="example">
+            <div class="example-demo">
+              <div class="kss-example"><ul class="icon_list ">
+  <li class="icon_list-li customicon-Check_mark_icon">Valid</li>
+  <li class="icon_list-li fa-lock">Locked</li>
+</ul></div>
+                <hr />
+                <h4>Large icon list <span class="u-f-right"><code>.icon_list--large</code></span></h4>
+                <div class="kss-example"><ul class="icon_list icon_list--large">
+  <li class="icon_list-li customicon-Check_mark_icon">Valid</li>
+  <li class="icon_list-li fa-lock">Locked</li>
+</ul></div>
+                <hr />
+                <h4>Top aligned icon list <span class="u-f-right"><code>.icon_list--top</code></span></h4>
+                <div class="kss-example"><ul class="icon_list icon_list--top">
+  <li class="icon_list-li customicon-Check_mark_icon">Valid</li>
+  <li class="icon_list-li fa-lock">Locked</li>
+</ul></div>
+            </div>
+            <div class="example-code">
+<pre class="prettyprint no-copy">&lt;ul class=&quot;icon_list &quot;&gt;
+  &lt;li class=&quot;icon_list-li customicon-Check_mark_icon&quot;&gt;Valid&lt;/li&gt;
+  &lt;li class=&quot;icon_list-li fa-lock&quot;&gt;Locked&lt;/li&gt;
+&lt;/ul&gt;</pre>
+            </div>
+            <div class="example-toggle"></div>
+          </section>
+      </article>
+      <article class="pattern">
+          <h3 class="kss-title" id="4.4.1">
+            <span class="kss-ref badge pull-right">4.4.1</span> Icon List items
+          </h3>
+          <div class="subtitle pattern-description"><p>Modifiers for the items in the icon list</p>
+</div>
+          <section class="example">
+            <div class="example-demo">
+              <div class="kss-example"><ul class="icon_list">
+  <li class="icon_list-li customicon-Check_mark_icon ">Valid</li>
+  <li class="icon_list-li fa-lock ">Locked</li>
+</ul></div>
+                <hr />
+                <h4>Success coloring for the icon <span class="u-f-right"><code>.icon_list-li--success</code></span></h4>
+                <div class="kss-example"><ul class="icon_list">
+  <li class="icon_list-li customicon-Check_mark_icon icon_list-li--success">Valid</li>
+  <li class="icon_list-li fa-lock icon_list-li--success">Locked</li>
+</ul></div>
+                <hr />
+                <h4>Item aligned to the top <span class="u-f-right"><code>.icon_list-li--top</code></span></h4>
+                <div class="kss-example"><ul class="icon_list">
+  <li class="icon_list-li customicon-Check_mark_icon icon_list-li--top">Valid</li>
+  <li class="icon_list-li fa-lock icon_list-li--top">Locked</li>
+</ul></div>
+            </div>
+            <div class="example-code">
+<pre class="prettyprint no-copy">&lt;ul class=&quot;icon_list&quot;&gt;
+  &lt;li class=&quot;icon_list-li customicon-Check_mark_icon &quot;&gt;Valid&lt;/li&gt;
+  &lt;li class=&quot;icon_list-li fa-lock &quot;&gt;Locked&lt;/li&gt;
+&lt;/ul&gt;</pre>
+            </div>
+            <div class="example-toggle"></div>
+          </section>
+      </article>
+      <article class="pattern">
+          <h2 class="kss-title" id="4.5">
+            <span class="kss-ref badge pull-right">4.5</span> Icon Box
+          </h2>
+          <div class="subtitle pattern-description"><p>Box shaped icon that house an element</p>
+</div>
+          <section class="example">
+            <div class="example-demo">
+              <div class="kss-example"><div class="icon_box fa-chevron-right "></div></div>
+                <hr />
+                <h4>inactive icon state <span class="u-f-right"><code>.icon_box--gray</code></span></h4>
+                <div class="kss-example"><div class="icon_box fa-chevron-right icon_box--gray"></div></div>
+            </div>
+            <div class="example-code">
+<pre class="prettyprint no-copy">&lt;div class=&quot;icon_box fa-chevron-right &quot;&gt;&lt;/div&gt;</pre>
+            </div>
+            <div class="example-toggle"></div>
+          </section>
+      </article>
+      <article class="pattern">
+          <h2 class="kss-title" id="4.6">
+            <span class="kss-ref badge pull-right">4.6</span> Draw icons
+          </h2>
+          <div class="subtitle pattern-description"><p>Illustrations as icons</p>
+</div>
+          <section class="example">
+            <div class="example-demo">
+              <div class="kss-example"><div class="draw "></div></div>
+                <hr />
+                <h4>Small illustrated icons <span class="u-f-right"><code>.draw--small</code></span></h4>
+                <div class="kss-example"><div class="draw draw--small"></div></div>
+                <hr />
+                <h4>IDS Shield icon <span class="u-f-right"><code>.draw--shield</code></span></h4>
+                <div class="kss-example"><div class="draw draw--shield"></div></div>
+            </div>
+            <div class="example-code">
+<pre class="prettyprint no-copy">&lt;div class=&quot;draw &quot;&gt;&lt;/div&gt;</pre>
+            </div>
+            <div class="example-toggle"></div>
+          </section>
+      </article>
+      <article class="pattern">
+          <h2 class="kss-title" id="4.7">
+            <span class="kss-ref badge pull-right">4.7</span> Icon Attach
+          </h2>
+          <div class="subtitle pattern-description"><p>Icon attatchment for an element.</p>
+</div>
+          <section class="example">
+            <div class="example-demo">
+              <div class="kss-example"><div style="position: relative; width: 100px; height: 100px; background-color: #000; border-radius: 100px;">
+  <div class="icon_attach fa-envelope " ></div>
+</div>
+<div style="position: relative; width: 100px; height: 100px; background-color: #000; border-radius: 100px;">
+  <div class="icon_attach draw draw--shield draw--small " ></div>
+</div></div>
+                <hr />
+                <h4>Small icon <span class="u-f-right"><code>.icon_attach--small</code></span></h4>
+                <div class="kss-example"><div style="position: relative; width: 100px; height: 100px; background-color: #000; border-radius: 100px;">
+  <div class="icon_attach fa-envelope icon_attach--small" ></div>
+</div>
+<div style="position: relative; width: 100px; height: 100px; background-color: #000; border-radius: 100px;">
+  <div class="icon_attach draw draw--shield draw--small icon_attach--small" ></div>
+</div></div>
+            </div>
+            <div class="example-code">
+<pre class="prettyprint no-copy">&lt;div style=&quot;position: relative; width: 100px; height: 100px; background-color: #000; border-radius: 100px;&quot;&gt;
+  &lt;div class=&quot;icon_attach fa-envelope &quot; &gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;position: relative; width: 100px; height: 100px; background-color: #000; border-radius: 100px;&quot;&gt;
+  &lt;div class=&quot;icon_attach draw draw--shield draw--small &quot; &gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+            </div>
+            <div class="example-toggle"></div>
+          </section>
+      </article>
+
+
+        </div>
+    </div>
+
+    <footer class="footer js-footer container container--large container--gray8 ">
+  <div class="footer-nav wrapper">
+    <div class="grid grid--collapse">
+      <div class="column-6">
+        <div class="grid grid--no_gutter">
+          <div class="column-footer_nav explore">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="https://www.identity.com/">Home</a></li>
+              <li class="u-hidden--is-signed_out"><a href="/identitysmart/dashboard">IdentitySmart</a></li>
+              <li class="u-hidden--is-signed_in"><a href="/features">IdentitySmart</a></li>
+              <li><a href="https://www.identity.com/about">About Us</a></li>
+              <li><a href="https://www.identity.com/blog" target="_blank">News &amp; Blog</a></li>
+              <li><a href="https://www.identity.com/developers">API</a></li>
+            </ul>
+          </div>
+          <div class="column-footer_nav support">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="https://www.identity.com/contact">Contact Us</a></li>
+              <li><a href="https://www.identity.com/faq">Help Center</a></li>
+              <li><a href="https://www.identity.com/legal/terms">Terms of Use</a></li>
+              <li><a href="https://www.identity.com/legal/privacy">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="column-6 u-ta-center--mobile u-ta-right--desktop">
+        <div class="u-display-inline-block">
+          <div class="u-ta-left--desktop">
+            <p class="footer-copyright">All rights reserved &copy; 2015 Identity.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+  <script src="../styleguide/public/js/styleguide.js"></script>
+  <script src="../public/js/id-bower.js"></script>
+
+
+
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=html"></script>
+  </body>
+</html>

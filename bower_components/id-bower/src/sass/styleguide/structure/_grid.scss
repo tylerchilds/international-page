@@ -1,0 +1,295 @@
+/*
+
+Grid
+
+Markup:
+<div class="grid {{modifier_class}}">
+  <div class="column-4">First</div>
+  <div class="column-4">Second</div>
+</div>
+
+.grid--reverse         - Reversed grid row
+.grid--gutter_bottom   - Grid with no gutters
+.grid--gutter_small    - Grid with no gutters
+.grid--no_gutter       - Grid with no gutters
+.grid--collapse        - Collapsed grid for mobile
+.grid--left            - Align columns left
+.grid--center          - Align columns center
+.grid--right           - Align columns right
+
+Styleguide 9.0
+
+*/
+
+$gutter: 20px;
+$fixed-multiple: 25;
+
+.grid{
+  position: relative;
+  clear: both;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 0;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+.grid--reverse{
+  direction: rtl;
+}
+
+.grid--reverse > .column,
+.grid--reverse > [class*="column"]{
+  direction:ltr;
+
+  &:first-child{
+    padding-left: $gutter/2;
+    padding-right: 0;
+  }
+
+  &:last-child{
+    padding-right: $gutter/2;
+    padding-left: 0;
+  }
+}
+
+.grid--gutter_bottom {
+  padding-bottom: $gutter;
+}
+
+.grid--gutter_small > [class*="column"]{
+  padding: 0 $gutter/4;
+
+  &:first-child{
+    padding-left: 0;
+  }
+  &:last-child{
+    padding-right: 0;
+  }
+}
+
+.grid--gutter_small > [class*="column--push"],
+.grid--gutter_small > [class*="column--pull"]{
+  &:first-child{
+    padding-left: $gutter/4;
+    padding-right: 0;
+  }
+
+  &:last-child{
+    padding-right: $gutter/4;
+    padding-left: 0;
+  }
+}
+
+.grid--gutter_small.grid--reverse > [class*="column--push"],
+.grid--gutter_small.grid--reverse > [class*="column--pull"]{
+  &:first-child{
+    padding-left: $gutter/4;
+    padding-right: 0;
+  }
+
+  &:last-child{
+    padding-right: $gutter/4;
+    padding-left: 0;
+  }
+}
+
+.grid--gutter_small.grid--reverse > [class*="column--push"],
+.grid--gutter_small.grid--reverse > [class*="column--pull"]{
+  &:first-child{
+    padding-right: $gutter/4;
+    padding-left: 0;
+  }
+
+  &:last-child{
+    padding-left: $gutter/4;
+    padding-right: 0;
+  }
+}
+
+.grid--gutter_small.grid--gutter_bottom {
+  padding-bottom: $gutter/2;
+}
+
+.grid--no_gutter [class*="column"]{
+  padding: 0;
+
+  &:first-child,
+  &:last-child{
+    padding: 0;
+  }
+}
+
+.grid--no_gutter.grid--gutter_bottom {
+  padding-bottom: 0;
+}
+
+@media (max-width: 767px){
+  .grid--collapse:before {
+    content: none;
+  }
+
+  .grid--collapse > [class*="column"],
+  .grid--collapse.grid--gutter_small > [class*="column"],
+  .grid--collapse.grid--reverse > [class*="column"]{
+    display: block;
+    width: 100%;
+    right: auto;
+    left: auto;
+
+    &,
+    &:first-child,
+    &:last-child{
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .grid--collapse > [class*="column--right"],
+  .grid--collapse > [class*="column--left"]{
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.grid--left{
+  text-align: left;
+}
+
+.grid--center{
+  text-align: center;
+}
+
+.grid--right{
+  text-align: right;
+}
+
+/*
+
+Columns
+
+<div class="grid">
+  <div class="column-3 {{modifier_class}}">First</div>
+  <div class="column-9">First</div>
+</div>
+
+.column-{1,12}         - Column value between 1 and 12
+.column--left           - Left aligned column
+.column--center         - Center aligned column
+.column--right          - Right aligned column
+.column--top            - Top aligned column
+.column--middle         - Middle aligned column
+.column--bottom         - Bottom aligned column
+.column--push-{1,12}   - Column pushed to the right
+.column--pull-{1,12}   - Column pulled to the left
+.column--fixed-#       - Fixed width column where # is a multiple of 25 less than 400
+.column--left-#        - Column that shares a fixed column on the left where # is the value from .column--fixed-#
+.column--right-#       - Column that shares a fixed column on the right where # is the value from .column--fixed-#
+
+No Styleguide Reference
+
+*/
+
+[class*="column"]{
+  font-size: $base-font-size;
+  position: relative;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 $gutter/2;
+
+  &:first-child{
+    padding-left: 0;
+  }
+
+  &:last-child{
+    padding-right: 0;
+  }
+}
+
+[class*="column--push"],
+[class*="column--pull"]{
+  &:first-child{
+    padding-left: $gutter/2;
+    padding-right: 0;
+  }
+
+  &:last-child{
+    padding-right: $gutter/2;
+    padding-left: 0;
+  }
+}
+
+.column--left{
+  text-align: left;
+}
+
+.column--center{
+  text-align: center;
+}
+
+.column--right{
+  text-align: right;
+}
+
+/* Vertical Top */
+.column--middle {
+  vertical-align: top;
+}
+
+/* Vertical Center */
+.column--middle {
+  vertical-align: middle;
+}
+
+/* Vertical Bottom */
+.column--bottom {
+  vertical-align: bottom;
+}
+
+// generate grid cells
+@for $i from 1 through 12 {
+  .column-#{$i} {
+    width: ($i / 12 * 100%);
+  }
+
+  // generate push offsets
+  .column--push-#{$i}{
+    left: ($i / 12 * 100%);
+  }
+
+  // generate pull offsets
+  .column--pull-#{$i}{
+    left: -($i / 12 * 100%);
+  }
+}
+
+/* These fixed columns need to display over any cell the overlap */
+[class*="column--fixed"]{
+  z-index: $z_index-1--foreground;
+}
+
+// generate fixed columns
+@for $i from 1 through 16 {
+  .column--fixed-#{$i * $fixed-multiple}{
+    width: ($i * $fixed-multiple)+px;
+  }
+
+  // generate shared left offsets
+  .column--left-#{$i * $fixed-multiple}{
+    padding-left: ($i * $fixed-multiple)+($gutter/2);
+    margin-left: -($i * $fixed-multiple)+px;
+  }
+
+  // generate shared right offsets
+  .column--right-#{$i * $fixed-multiple}{
+    padding-right: ($i * $fixed-multiple)+($gutter/2);
+    margin-right: -($i * $fixed-multiple)+px;
+  }
+}

@@ -1,0 +1,56 @@
+$font-path: "../fonts" !default;
+
+@font-face{
+    font-family: "Proxima";
+    src: url('#{$font-path}/proxima-nova.eot' + '?#iefix');
+    src: url('#{$font-path}/proxima-nova.eot' + '?#iefix') format("eot"),
+         url('#{$font-path}/proxima-nova.woff') format("woff"),
+         url('#{$font-path}/proxima-nova.ttf') format("truetype"),
+         url('#{$font-path}/proxima-nova.svg') format("svg");
+    font-weight: normal;
+    font-style: none;
+}
+
+@font-face{
+    font-family: "Proxima";
+    src: url('#{$font-path}/proxima-nova-bold.eot' + '?#iefix');
+    src: url('#{$font-path}/proxima-nova-bold.eot' + '?#iefix') format("eot"),
+         url('#{$font-path}/proxima-nova-bold.woff') format("woff"),
+         url('#{$font-path}/proxima-nova-bold.ttf') format("truetype"),
+         url('#{$font-path}/proxima-nova-bold.svg') format("svg");
+    font-weight: bold;
+    font-style: none;
+}
+
+@font-face{
+    font-family: "Proxima";
+    src: url('#{$font-path}/proxima-nova-semibold.eot' + '?#iefix');
+    src: url('#{$font-path}/proxima-nova-semibold.eot' + '?#iefix') format("eot"),
+         url('#{$font-path}/proxima-nova-semibold.woff') format("woff"),
+         url('#{$font-path}/proxima-nova-semibold.ttf') format("truetype"),
+         url('#{$font-path}/proxima-nova-semibold.svg') format("svg");
+    font-weight: 500;
+    font-style: none;
+}
+
+@font-face{
+    font-family: "Proxima";
+    src: url('#{$font-path}/proxima-nova-light.eot' + '?#iefix');
+    src: url('#{$font-path}/proxima-nova-light.eot' + '?#iefix') format("eot"),
+         url('#{$font-path}/proxima-nova-light.woff') format("woff"),
+         url('#{$font-path}/proxima-nova-light.ttf') format("truetype"),
+         url('#{$font-path}/proxima-nova-light.svg') format("svg");
+    font-weight: 200;
+    font-style: none;
+}
+
+@font-face{
+    font-family: "Ultima";
+    src: url('#{$font-path}/Ultima-Alt-Lt.eot' + '?#iefix');
+    src: url('#{$font-path}/Ultima-Alt-Lt-Lt.eot' + '?#iefix') format("eot"),
+         url('#{$font-path}/Ultima-Alt-Lt.woff') format("woff"),
+         url('#{$font-path}/Ultima-Alt-Lt.ttf') format("truetype"),
+         url('#{$font-path}/Ultima-Alt-Lt.svg') format("svg");
+    font-weight: normal;
+    font-style: none;
+}

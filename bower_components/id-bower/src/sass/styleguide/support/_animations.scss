@@ -1,0 +1,45 @@
+// Animation based mixins
+//
+// Styleguide
+
+@include keyframes(anim-rotate) {
+  0% {
+    @include transform(rotate(0));
+  }
+  100% {
+    @include transform(rotate(360deg));
+  }
+}
+
+@mixin transition-properties($properties: all){
+  @include transition-property($properties);
+  @include transition-duration($transition-speed);
+}
+
+.a-fade_out{
+  @include transition-properties(opacity);
+  opacity: 1;
+}
+
+.a-fade_out--is_active{
+  opacity: 0;
+}
+
+.a-fade_in{
+  @include transition-properties(opacity);
+  opacity: 0;
+}
+
+.a-fade_in--is_active{
+  opacity: 1;
+}
+
+.a-slide_down{
+  @include transition-properties(max-height);
+  max-height: 0;
+  overflow-y: hidden;
+}
+
+.a-slide_down--is_active{
+  max-height: 10000px;
+}

@@ -1,0 +1,230 @@
+*{
+  @extend .u-font-smoothing;
+}
+
+html{
+  height: 100%;
+  position: relative;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
+pre,
+code,
+samp,
+kbd{
+  font-family: $monospace;
+  background-color: $gray6;
+  border: 1px solid $gray5;
+  border-radius: 2px;
+  font-size: $base-font-size - 2;
+}
+
+code,
+samp,
+kbd{
+  padding: 0 4px;
+}
+
+pre{
+  padding: 8px;
+
+  code,
+  samp,
+  kbd{
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+  }
+}
+
+a:link{
+  color: $teal;
+  text-decoration: none;
+}
+
+a:visited{
+  color: $teal;
+}
+
+a:hover,
+a:focus{
+  color: $teal-dark;
+}
+
+a:active{
+  color: $red;
+}
+
+img{
+  max-width: 100%;
+}
+
+hr,
+pre,
+blockquote{
+  margin-bottom: 20px;
+}
+
+p{
+  margin-bottom: 2px;
+}
+
+img{
+  margin-bottom: -5px;
+}
+
+ul,
+ol,
+dl,
+dd,
+figure,
+figcaption{
+
+}
+
+hr{
+  border-top: 1px solid $gray4;
+  border-bottom: 1px solid $gray6;
+  border-left: none;
+  border-right: none;
+}
+
+blockquote{
+
+}
+
+ol,
+ul{
+
+}
+
+dt{
+  font-style: italic;
+}
+dd{
+  text-indent: 0;
+}
+
+figure{
+  display: table;
+  margin: 0 auto;
+
+  img{
+    display: table;
+    margin: 0 auto;
+  }
+}
+
+small{
+
+}
+
+figcaption,
+sub,
+sup{
+  font-size: $base-font-size - 2;
+}
+
+caption,
+figcaption{
+  text-align: center;
+  font-style: italic;
+}
+
+em,
+cite,
+i{
+  font-style: italic;
+}
+
+strong,
+var,
+b{
+  font-weight: bold;
+}
+
+q{
+  &:before{
+    content: "'";
+  }
+
+  &:after{
+    content: "'";
+  }
+
+  & > q{
+    font-style: italic;
+  }
+}
+
+dfn,
+abbr{
+  border-bottom: 1px dotted $gray3;
+  cursor: default;
+}
+
+sub{
+  vertical-align: sub;
+}
+sup{
+  vertical-align: super;
+}
+
+table{
+
+  caption{
+
+  }
+
+  thead{
+
+  }
+
+  tbody{
+
+
+    tr:nth-child(2n){
+
+    }
+  }
+
+  th, td{
+
+  }
+
+  tfoot{
+
+    td{
+
+    }
+  }
+}
+
+input,
+label,
+select,
+button,
+textarea
+{
+  @extend .body;
+  resize: none;
+  @extend .u-appearance-none;
+}
+
+// remove yellow from chrome auto-fill background
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: $gray1;
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  color: $gray1;
+}
