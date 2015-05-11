@@ -19,7 +19,7 @@
     <div class="thankyou-msg"></div>
   </div>
 </div>
-<form class="form_pretty">
+<form class="form_pretty" action="/international" id="subscribe" method="post">
 
   <label class="textfield textfield--label_bordered">
     <input type="text" id="int-email" name="int-email" data-key="email" validation="email">
@@ -341,9 +341,9 @@
       <div class="wrapper container container--large">
         <div class="grid grid--collapse">
           <div class="column-6">
-            <h3 class="headline_secondary">{{ text['landing']['120'] }} <br/>{{ text['landing']['121'] }}</h3>
+            <h2 class="headline_secondary">{{ text['landing']['120'] }} <br/>{{ text['landing']['121'] }}</h2>
             <p class="protect-desc">{{ text['landing']['122'] }}</p>
-            <div class="grid">
+            <div class="grid gap">
               <div class="feature active" id="js-breach" data-img="{{ 'images/landing/features/breach.jpg' | assetPath }}">
                 <div class="column feature-icon column--middle">
                   <div class="circle-with-icon breach active"></div>

@@ -26,7 +26,7 @@ body{
   }
   .landing-ids-testimonials {
     text-align: center;
-    padding: 50px 0px;
+    padding: 50px 10px;
     background-color: $gray1;
     color: $white;
     .testimonies {
@@ -208,7 +208,7 @@ body{
 #digital-footprint {
 
   background-image: url('images/landing/Hero_image_desktop.jpg');
-  background-position-x: center;
+  background-position-x: 35%;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 100px 10px 180px 10px;

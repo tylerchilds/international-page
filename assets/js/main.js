@@ -44,7 +44,7 @@ $(function(){
     e.preventDefault();
     if($(this).valid()){
       $.ajax({
-        url:"subscribe/international",
+        url:"/subscribe/international",
         method:"POST",
         data: {
           email: $("#int-email").val(),
