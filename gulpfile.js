@@ -20,7 +20,8 @@ var util      = require('gulp-util'),
   runSequence = require('run-sequence'),
   yaml        = require('gulp-yaml'),
   minimist    = require('minimist'),
-  preprocess = require('gulp-preprocess');
+  preprocess  = require('gulp-preprocess'),
+  zip         =require('gulp-zip');
 
 ENVIRONMENTS = {
   local: {
@@ -39,7 +40,7 @@ ENVIRONMENTS = {
 };
 
 ASSETS_PATH = 'assets/';
-DEPLOY_ENV = ENVIRONMENTS.local;
+DEPLOY_ENV = ENVIRONMENTS.prod;
 
 var config = {
    bowerDir: './bower_components' 
@@ -154,7 +155,8 @@ gulp.task('index', ['addtext'], function(){
 // Clean build
 gulp.task('clean', function() {
   return gulp.src([
-      './public'
+      './public',
+      './international.zip'
     ])
     .pipe(clean({force: true}));
 });
@@ -168,22 +170,12 @@ gulp.task('watch', function() {
   gulp.watch(['./assets/html/**/*.html', "./assets/index.html"], ['index']);
 });
 
-gulp.task('default', function(){
-  runSequence('clean', 'img', ['compass', 'scripts', 'public'], 'index', 'watch');
+gulp.task('default', ['compile'], function(){
+  runSequence('watch');
 });
 
-gulp.task('zip', function(){
-  if(typeof process.argv.slice(4)[0] == 'undefined'){
-    console.log('\n\n###################################');
-    console.log("Please specify a deployment environment");
-    console.log("\teg. gulp cdn -a beta");
-    console.log('###################################\n\n');
-    return;
-  }
-
-  DEPLOY_ENV = ENVIRONMENTS[process.argv.slice(4)[0]];
-  ASSETS_PATH = Date.now() + '/';
-  runSequence('img', ['compass_min', 'scripts_min', 'public'], 'index');
+gulp.task('compile', function(){
+  return runSequence('clean', 'img', ['compass', 'scripts', 'public'], 'index', 'watch');
 });
 
 assetPath = function (input) {

@@ -35,6 +35,7 @@
     "jasmine-jquery": "^2.0",
     "sinon": "^1.12.1",
     "minimist": "latest",
-    "run-sequence": "latest"
+    "run-sequence": "latest",
+    "gulp-zip": "latest"
   }
 }
