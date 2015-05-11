@@ -1,0 +1,70 @@
+{
+  "landing": {
+    "101": "Take Control of Your Digital Identity",
+    "102": "We respect your privacy.",
+    "103": "We won't share your email address without your permission.",
+    "104": "Alert me about potential data breaches associated with my identity.",
+    "105": "What will people find when they search for you? Claim your iD now to",
+    "106": "explore, monitor, and control your digital identity.",
+    "107": "iD puts you in control of your digital footprint",
+    "108": "Explore the information available about you online",
+    "109": "We scan through billions of public records to help you easily discover what information is associated with your identity.",
+    "110": "Sources include:",
+    "111": "Courthouses",
+    "112": "Credit Bureaus",
+    "113": "Phonebooks",
+    "114": "Social Networks",
+    "115": "Search Engines",
+    "116": "And More",
+    "117": "Nothing is in this one",
+    "118": "Control how others see you with a Verified iD Card.",
+    "119": "Leverage your trusted reputation wherever you go online - without sharing too much data and compromising your privacy. It’s like a digital driver’s license (but with no DMV wait).",
+    "120": "Protect your reputation",
+    "121": "and online identity",
+    "122": "Get IdentitySmart for a suite of tools that give you an additional layer of identity monitoring, protection and support:",
+    "123": "Hacked Accounts + Security Breach Monitoring",
+    "124": "Court, Criminal + Public Records About You",
+    "125": "Comprehensive Credit Checks + Monitoring",
+    "126": "Financial Fraud Monitoring Alerts",
+    "127": "Stolen Identity Restoration Support"
+  },
+  "scroll": {
+    "1": "scroll for more"
+  },
+  "button": {
+    "start": "Get Started",
+    "find": "Find Me",
+    "upgrade": "Sign Up",
+    "free": "Free iD Card",
+    "filter": "Filter Search",
+    "submit": "Submit My Order",
+    "signup": "Confirm and Sign Up",
+    "thisisme": "This Is Me",
+    "breach": "View breach alerts",
+    "manage": "Claim my information",
+    "protect": "Protect me against tracking",
+    "activate": "Activate monitoring my credit",
+    "fraud": "Activate fraud alerts",
+    "allrecs": "View all my records",
+    "claim": "Claim my identity"
+  },
+  "faq": {
+    "101": "Support",
+    "102": "Is this safe?",
+    "103": "At Identity.com, we're committed to helping you control and protect your personal information. That means we won't share the data that you provide here on iD without your permission. We also use encrypted HTTPS connections to keep prying eyes away from your data.",
+    "104": "Why do I need to provide my information?",
+    "105": "In order to find the public information that is already being shared about you, we need to know who you are! We use the information you provide to locate your public records, as well as to scan for places where your information may be improperly exposed.",
+    "106": "How do you find information about me?",
+    "107": "First, we look at digitized public record sources across the US, such as court and county clerk websites. Because not all towns have digitized their records yet, you may not see records from locations that are still paper-only.",
+    "108": "Second, we look at online black market forums and other locations where personal information is often illegally traded by hackers, to see if your email address or other online accounts have potentially been compromised."
+  },
+  "footer": {
+    "1": "About",
+    "2": "Identity.com empowers you to manage, protect and share your information exactly the way you want.",
+    "3": "Support",
+    "4": "Terms of Service",
+    "5": "Privacy Policy",
+    "6": "All rights reserved",
+    "7": "2015 Identity.com"
+  }
+}

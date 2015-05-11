@@ -3,20 +3,212 @@
 {% block title %}Identity{% endblock %}
 
 {% block content %}
-  <section id="landing-wrapper">
-    <section id="digital-footprint">
-      <div id="digital-footprint-wrapper">
-        <div class="loader">
-          <div class="flipper">
-            <div class="front"></div>
-            <div class="back"></div>
+  <div class="js-landing landing-container" id="landingContainer">
+    <section id="landing-wrapper">
+      <section id="digital-footprint">
+        <div id="digital-footprint-wrapper">
+
+        </div>
+      </section>
+    </section>
+
+    <section class="js-form"></section>
+
+    <section id="your-identity">
+      <div class="wrapper container container--large">
+        <h2 class="headline_secondary"> {{ text['landing']['107'] }} </h2>
+        <div class="grid underlapping-border grid--collapse">
+          <div class="discover-text column-5">
+            <img src="{{ 'images/landing/icons/discover.svg' | assetPath }}" />
+            <h3 class="headline_secondary">{{ text['landing']['108'] }}</h3>
+            <p class="descrip-text">{{ text['landing']['109'] }}</p>
+            <h5>{{ text['landing']['110'] }}</h5>
+            <ul class="bulleted-list column gap--mobile">
+              <li>{{ text['landing']['111'] }}</li>
+              <li>{{ text['landing']['112'] }}</li>
+              <li>{{ text['landing']['113'] }}</li>
+              <li>{{ text['landing']['114'] }}</li>
+              <li>{{ text['landing']['115'] }}</li>
+              <li>{{ text['landing']['116'] }}</li>
+            </ul>
+          </div>
+          <div class="laptop column-7 u-hidden--mobile bottom">
+
+            <img src="{{ 'images/landing/laptop.jpg' | assetPath }}" id="laptop-frame" >
+            <div class="scrollingpage">
+
+              <img src="{{ 'images/landing/bg_report_sample.jpg' | assetPath }}" id="report"/>
+              <div id="scroll-for-more-arrow">
+                <p id="scrollformore">{{ text['scroll']['1'] }}</p>
+                <i class="fa fa-angle-down bouncey"></i>
+              </div>
+            </div>
+            <div class="ribbon">
+              <div class="ribbon-left"></div>
+              <div class="ribbon-content">Sample Report</div>
+              <div class="ribbon-right"></div>
+            </div>
+          </div>
+        </div>
+        <a class="btn centered u-hidden--desktop" href="#">{{ text['button']['start'] }}</a>
+      </div>
+    </section>
+
+    <section id="protect">
+      <div class="wrapper container container--large">
+        <div class="grid grid--collapse">
+          <div class="column-6">
+            <h3 class="headline_secondary">{{ text['landing']['120'] }} <br/>{{ text['landing']['121'] }}</h3>
+            <p class="protect-desc">{{ text['landing']['122'] }}</p>
+            <div class="grid">
+              <div class="feature active" id="js-breach" data-img="{{ 'images/landing/features/breach.jpg' | assetPath }}">
+                <div class="column feature-icon column--middle">
+                  <div class="circle-with-icon breach active"></div>
+                </div>
+                <div class="column-12 feature-icon-text column--middle">
+                  <p>{{ text['landing']['123'] }}</p>
+                </div>
+              </div>
+
+              <div class="feature" id="js-full" data-img="{{ 'images/landing/features/full.jpg' | assetPath }}">
+                <div class="column feature-icon column--middle">
+                  <div class="circle-with-icon full"></div>
+                </div>
+                <div class="column-12 feature-icon-text column--middle">
+                  <p>{{ text['landing']['124'] }}</p>
+                </div>
+              </div>
+
+              <div class="feature" id="js-financial" data-img="{{ 'images/landing/features/financial.jpg' | assetPath }}">
+                <div class="column feature-icon column--middle">
+                  <div class="circle-with-icon financial"></div>
+                </div>
+                <div class="column-12 feature-icon-text column--middle">
+                  <p>{{ text['landing']['125'] }}</p>
+                </div>
+              </div>
+
+              <div class="feature" id="js-fraud" data-img="{{ 'images/landing/features/fraud.jpg' | assetPath }}">
+                <div class="column feature-icon column--middle">
+                  <div class="circle-with-icon fraud"></div>
+                </div>
+                <div class="column-12 feature-icon-text column--middle">
+                  <p>{{ text['landing']['126'] }}</p>
+                </div>
+              </div>
+
+              <div class="feature" id="js-identity" data-img="{{ 'images/landing/features/identity.jpg' | assetPath }}">
+                <div class="column feature-icon column--middle">
+                  <div class="circle-with-icon identity"></div>
+                </div>
+                <div class="column-12 feature-icon-text column--middle">
+                  <p>{{ text['landing']['127'] }}</p>
+                </div>
+              </div>
+            </div>
+            <a class="btn centered u-hidden--desktop clearfix" href="#">{{ text['button']['start'] }}</a>
+          </div>
+          <div class="features-imgs column-6 u-hidden--mobile">
+            <div class="browser-holder">
+              <div class="browser-wrapper">
+
+
+                <div id="browser-top">
+                  <img src="{{ 'images/landing/features/IDS_Browser-crop.jpg' | assetPath }}" >
+                   <div class="ribbon for-ids-panel">
+                    <div class="ribbon-left"></div>
+                    <div class="ribbon-content">Sample</div>
+                    <div class="ribbon-right"></div>
+                  </div>
+                </div>
+                <div id="js-feature-image" class="feature-image-holder">
+                  <img src="{{ 'images/landing/features/breach.jpg' | assetPath }}" id="js-feature-img" >
+                </div>
+
+
+              <div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-  </section>
 
-  <div class="js-body view-content"></div>
+    <section class="landing-ids-testimonials" id="community">
+      <img src="{{ 'images/landing/ids_logo_for_dark.png' | assetPath }}" alt="IdentitySmart Logo" class="gap"></img>
+      <div class="testimonies"> <!-- this is the main window -->
+        <div class = "testimony-box" data-preview={{card.id_card}} data-author={{card.author}}>
+          <div class="type type--quote">
+            <p class="type--quote-body">
+              Because of the alert you sent me, I called my bank, discovered that my card was compromised and the problem was resolved immediately. Thank you so much for your service. I intend to remain a loyal customer until the day I stop spending money.
+            </p>
+            <p class="type--quote-attribution">
+               - Edward C
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faqs">
+      <h2 class="headline_secondary">{{ text['faq']['101'] }}</h2>
+       <div class="faq-container">
+        <article class="faq-question">
+          <div class="faq-items clearfix">
+            <div class="faq-item-main">
+              <span class="faq-item-text">{{ text['faq']['102'] }}</span>
+            </div>
+            <div>
+              <span class="faq-item-right">
+                <i class="fa fa-chevron-down"></i>
+              </span>
+            </div>
+          </div>
+        </article>
+        <div class="faq-answer">
+          <p>{{ text['faq']['103'] }}</p>
+        </div>
+      </div>
+
+      <div class="faq-container">
+        <article class="faq-question">
+          <div class="faq-items clearfix">
+            <div class="faq-item-main">
+              <span class="faq-item-text">{{ text['faq']['104'] }}</span>
+            </div>
+            <div>
+              <span class="faq-item-right">
+                <i class="fa fa-chevron-down"></i>
+              </span>
+            </div>
+          </div>
+        </article>
+        <div class="faq-answer">
+          <p>{{ text['faq']['105'] }}</p>
+        </div>
+      </div>
+
+      <div class="faq-container">
+        <article class="faq-question">
+          <div class="faq-items clearfix">
+            <div class="faq-item-main">
+              <span class="faq-item-text">{{ text['faq']['106'] }}</span>
+            </div>
+            <div>
+              <span class="faq-item-right">
+                <i class="fa fa-chevron-down"></i>
+              </span>
+            </div>
+          </div>
+        </article>
+        <div class="faq-answer">
+          <p>{{ text['faq']['107'] }}<br/><br/>{{ text['faq']['108'] }}</p>
+        </div>
+      </div>
+
+      <a class="btn centered" href="#">{{ text['button']['start'] }}</a>
+    </section>
+    <div class="js-body view-content"></div>
+  </div>
 {% endblock %}
 
 {% block scripts %}

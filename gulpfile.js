@@ -18,6 +18,7 @@ var util      = require('gulp-util'),
   include     = require('gulp-include'),
   minify      = require('gulp-minify-css'),
   runSequence = require('run-sequence'),
+  yaml        = require('gulp-yaml'),
   minimist    = require('minimist'),
   preprocess = require('gulp-preprocess');
 
@@ -123,8 +124,15 @@ gulp.task('public', function(){
     .pipe(gulp.dest('./public/' + ASSETS_PATH ));
 });
 
+// create add json to template
+gulp.task('addtext', function(){
+  return gulp.src('./assets/*.yml')
+    .pipe(yaml({space: 2}))
+    .pipe(gulp.dest('./'));
+});
+
 // Compile Templates
-gulp.task('index', function(){
+gulp.task('index', ['addtext'], function(){
 
   gulp.src('./assets/index.html')
     .pipe(swig({
@@ -133,6 +141,7 @@ gulp.task('index', function(){
         locals: {
           mixpanel_token: DEPLOY_ENV.mixpanel_token,
           asset_path: ASSETS_PATH,
+          text: require('./international.json')
         }
       },
       setup: function(swig){

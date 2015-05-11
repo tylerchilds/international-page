@@ -12,5 +12,7 @@ npm-debug.log
 .sass-cache
 .ruby-version
 
+assets/international.json
+
 public/
 node_modules/
