@@ -52,6 +52,7 @@ Markup:
 <div class="overlay {{modifier_class}}"></div>
 
 .overlay--is_active     - Activated overlay
+.overlay--white         - Overlay will be white when activated
 
 No Styleguide Reference
 
@@ -76,6 +77,10 @@ No Styleguide Reference
   background-color: rgba(49, 49, 50, .85);
   z-index: $z_index-7--overlay;
   opacity: 1;
+}
+
+.overlay--white.overlay--is_active{
+  background-color: rgba(255, 255, 255, .85);
 }
 
 /*

@@ -1,3 +1,7 @@
+### v0.1.66
+
+- automated bumps package version
+
 ### v0.1.65
 
 - automated bumps package version

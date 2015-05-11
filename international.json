@@ -1,4 +1,8 @@
 {
+  "international": {
+    "101": "Identity.com is currently unavailable in your country",
+    "102": "Be the first to know when we launch."
+  },
   "landing": {
     "101": "Take Control of Your Digital Identity",
     "102": "We respect your privacy.",

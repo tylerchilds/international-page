@@ -1,3 +1,6 @@
+international:
+  101: "Identity.com is currently unavailable in your country"
+  102: "Be the first to know when we launch."
 
 # landing page (form included)
 landing:

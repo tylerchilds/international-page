@@ -202,6 +202,16 @@ Typesetting colors
   color: $teal;
 }
 
+/*
+
+Typesetting weights
+
+*/
+
+@mixin type--500(){
+  font-weight: 500;
+}
+
 body,
 .body{
   color: $gray1;
@@ -328,6 +338,7 @@ Markup:
 .type--gray1            - Changes the type to be gray1
 .type--gray2            - Changes the type to be gray2
 .type--gray3            - Changes the type to be gray3
+.type--500              - Changes the type to be 500 weight
 .type--teal             - Changes the type to be teal
 .type--teal-dark        - Changes the type to be teal-dark
 .type--xsmall           - Smaller than the default font size
@@ -357,6 +368,11 @@ Styleguide 1.2
 .type--gray3,
 .type--gray3 *{
   @include type--gray3();
+}
+
+.type--500,
+.type--500 *{
+  @include type--500();
 }
 
 .type--teal,

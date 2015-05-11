@@ -229,16 +229,16 @@ No Styleguide Reference
   right: 0;
 }
 
+.footer p{
+  @include type--gray3();
+  font-weight: 500;
+  display: inline-block;
+}
+
 .footer a{
   @extend .link--gray3;
   padding: 4px 0;
   display: block;
-}
-
-.footer-copyright{
-  @include type--gray3();
-  font-weight: 500;
-  display: inline-block;
 }
 
 .column-footer_nav{
@@ -249,6 +249,24 @@ No Styleguide Reference
 
 .footer--signed_out .column-footer_nav{
   @extend .column-6;
+}
+
+.footer--funnel .column-footer_nav.about{
+  @extend .column-8;
+  padding-right: 40px;
+
+  @media (max-width: 767px){
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+.footer--funnel .column-footer_nav.support{
+  @extend .column-4;
+
+  @media (max-width: 767px){
+    width: 100%;
+  }
 }
 
 .trust-norton{

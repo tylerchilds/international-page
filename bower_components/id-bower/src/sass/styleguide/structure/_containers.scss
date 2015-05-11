@@ -11,6 +11,8 @@ Markup:
 .container--large             - Container with a large padding
 .container--teal              - Container with a teal background
 .container--white             - Container with a white background
+.container--gray2             - Container with a gray2 background
+.container--gray3             - Container with a gray3 background
 .container--gray6             - Container with a gray6 background
 .container--gray7             - Container with a gray7 background
 .container--gray8             - Container with a gray8 background
@@ -28,7 +30,7 @@ Styleguide 8.0
 
 */
 
-.container{
+@mixin container{
   padding: 10px;
 
   @media (min-width: 768px){
@@ -36,75 +38,183 @@ Styleguide 8.0
   }
 }
 
-.container--small{
+@mixin container--small{
   padding: 10px;
 }
 
-.container--large{
-  padding: 10px;
+@mixin container--large{
+  padding: 20px;
 
   @media (min-width: 768px){
     padding: 40px;
   }
 }
 
-.container--teal{
+@mixin container--xlarge{
+  padding: 30px 20px;
+
+  @media (min-width: 768px){
+    padding: 60px;
+  }
+}
+
+@mixin container--xxlarge{
+  padding: 40px 20px;
+
+  @media (min-width: 768px){
+    padding: 80px;
+  }
+}
+
+@mixin container--teal{
   background-color: $teal;
 }
 
-.container--white{
-  background-color: #fff;
+@mixin container--white{
+  background-color: $white;
 }
 
-.container--gray6{
+@mixin container--gray2{
+  background-color: $gray2;
+}
+
+@mixin container--gray3{
+  background-color: $gray3;
+}
+
+@mixin container--gray6{
   background-color: $gray6;
 }
 
-.container--gray7{
+@mixin container--gray7{
   background-color: $gray7;
 }
 
-.container--gray8{
+@mixin container--gray8{
   background-color: $gray8;
 }
 
-.container--gray9{
+@mixin container--gray9{
   background-color: $gray9;
 }
 
-.container--tight{
+@mixin container--tight{
   padding: 0;
 }
 
-.container--tight_x{
+@mixin container--tight_x{
   padding-left: 0;
   padding-right: 0;
 }
 
-.container--tight_y{
+@mixin container--tight_y{
   padding-top: 0;
   padding-bottom: 0;
 }
 
-.container--tight_top{
+@mixin container--tight_top{
   padding-top: 0;
 }
 
-.container--tight_bottom{
+@mixin container--tight_bottom{
   padding-bottom: 0;
 }
 
-.container--bordered{
+@mixin container--bordered{
   border: 1px solid $gray5;
   @include border-radius(1px);
 }
 
-.container--bordered_top{
+@mixin container--bordered_top{
   border-top: 1px solid $gray5;
 }
 
-.container--bordered_bottom{
+@mixin container--bordered_bottom{
   border-bottom: 1px solid $gray5;
+}
+
+.container{
+  @include container();
+}
+
+.container--small{
+  @include container--small();
+}
+
+.container--large{
+  @include container--large();
+}
+
+.container--xlarge{
+  @include container--xlarge();
+}
+
+.container--xxlarge{
+  @include container--xxlarge();
+}
+
+.container--teal{
+  @include container--teal();
+}
+
+.container--white{
+  @include container--white();
+}
+
+.container--gray2{
+  @include container--gray2();
+}
+
+.container--gray3{
+  @include container--gray3();
+}
+
+.container--gray6{
+  @include container--gray6();
+}
+
+.container--gray7{
+  @include container--gray7();
+}
+
+.container--gray8{
+  @include container--gray8();
+}
+
+.container--gray9{
+  @include container--gray9();
+}
+
+.container--tight{
+  @include container--tight();
+}
+
+.container--tight_x{
+  @include container--tight_x();
+}
+
+.container--tight_y{
+  @include container--tight_y();
+}
+
+.container--tight_top{
+  @include container--tight_top();
+}
+
+.container--tight_bottom{
+  @include container--tight_bottom();
+}
+
+.container--bordered{
+  @include container--bordered();
+}
+
+.container--bordered_top{
+  @include container--bordered_top();
+}
+
+.container--bordered_bottom{
+  @include container--bordered_bottom();
 }
 
 /*
@@ -116,19 +226,49 @@ Use wrappers when you need a content area that is the standard width and centere
 Markup:
 <div class="wrapper {{modifier_class}}">Wrapper</div>
 
-.wrapper--padded     - Secondary importance
+.wrapper--padded      - Top and bottom padding
+.wrapper--small       - Small Wrapper
+.wrapper--xsmall      - Smaller Wrapper
 
 Styleguide 8.1
 
 */
 
-.wrapper{
+@mixin wrapper{
   max-width: 960px;
   margin: 0 auto;
 }
 
+@mixin wrapper--padded{
+  padding: 20px 0;
+
+  @media (min-width: 768px){
+    padding: 40px 0;
+  }
+}
+
+@mixin wrapper--small{
+  max-width: 800px;
+}
+
+@mixin wrapper--xsmall{
+  max-width: 650px;
+}
+
+.wrapper{
+  @include wrapper();
+}
+
 .wrapper--padded{
-  padding: 40px 0;
+  @include wrapper--padded();
+}
+
+.wrapper--small{
+  @include wrapper--small();
+}
+
+.wrapper--xsmall{
+  @include wrapper--xsmall();
 }
 
 /*
@@ -138,47 +278,147 @@ Gap
 Gaps used for appropriately spacing components
 
 Markup:
-<div class="gap {{modifier_class}}" style="background-color: #000"></div>
+<div class="{{modifier_class}}" style="background-color: #000"></div>
 
-.gap              - normal sized gap below
-.gap--small       - small sized gap below
-.gap--large       - large sized gap below
-.gap--xlarge      - large sized gap below
+.gap                      - normal sized gap below
+.gap_small                - small sized gap below
+.gap_large                - large sized gap below
+.gap_xlarge               - large sized gap below
+.gap--mobile              - normal sized gap below only on mobile
+.gap_small--mobile        - small sized gap below only on mobile
+.gap_large--mobile        - large sized gap below only on mobile
+.gap_xlarge--mobile       - large sized gap below only on mobile
+.gap--desktop             - normal sized gap below only on desktop
+.gap_small--desktop       - small sized gap below only on desktop
+.gap_large--desktop       - large sized gap below only on desktop
+.gap_xlarge--desktop      - large sized gap below only on desktop
 
 Styleguide 8.2
 
 */
 
 @mixin gap{
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+
+  @media (min-width: 768px){
+    padding-bottom: 20px;
+  }
 }
 
-@mixin gap--small{
+@mixin gap_small{
   padding-bottom: 10px;
 }
 
-@mixin gap--large{
-  padding-bottom: 40px;
+@mixin gap_large{
+  padding-bottom: 20px;
+
+  @media (min-width: 768px){
+    padding-bottom: 40px;
+  }
 }
 
-@mixin gap--xlarge{
-  padding-bottom: 60px;
+@mixin gap_xlarge{
+  padding-bottom: 30px;
+
+  @media (min-width: 768px){
+    padding-bottom: 60px;
+  }
+}
+
+@mixin gap--mobile{
+  @media (max-width: 767px){
+    padding-bottom: 20px;
+  }
+}
+
+@mixin gap_small--mobile{
+  @media (max-width: 767px){
+    padding-bottom: 10px;
+  }
+}
+
+@mixin gap_large--mobile{
+  @media (max-width: 767px){
+    padding-bottom: 40px;
+  }
+}
+
+@mixin gap_xlarge--mobile{
+  @media (max-width: 767px){
+    padding-bottom: 60px;
+  }
+}
+
+@mixin gap--desktop{
+  @media (min-width: 768px){
+    padding-bottom: 20px;
+  }
+}
+
+@mixin gap_small--desktop{
+  @media (min-width: 768px){
+    padding-bottom: 10px;
+  }
+}
+
+@mixin gap_large--desktop{
+  @media (min-width: 768px){
+    padding-bottom: 40px;
+  }
+}
+
+@mixin gap_xlarge--desktop{
+  @media (min-width: 768px){
+    padding-bottom: 60px;
+  }
 }
 
 .gap{
   @include gap();
 }
 
-.gap--small{
-  @include gap--small();
+.gap_small{
+  @include gap_small();
 }
 
-.gap--large{
-  @include gap--large();
+.gap_large{
+  @include gap_large();
 }
 
-.gap--xlarge{
-  @include gap--xlarge();
+.gap_xlarge{
+  @include gap_xlarge();
+}
+
+.gap--mobile{
+  @include gap--mobile();
+}
+
+.gap_small--mobile{
+  @include gap_small--mobile();
+}
+
+.gap_large--mobile{
+  @include gap_large--mobile();
+}
+
+.gap_xlarge--mobile{
+  @include gap_xlarge--mobile();
+}
+
+.gap--desktop{
+  @include gap--desktop();
+}
+
+.gap_small--desktop{
+  @include gap_small--desktop();
+}
+
+.gap_large--desktop{
+  @include gap_large--desktop();
+}
+
+.gap_xlarge--desktop{
+  @include gap_xlarge--desktop();
 }
 
 /*

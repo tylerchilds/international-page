@@ -32,7 +32,6 @@ Identity.initialize_template_events = function(){
     $('body').css('padding-bottom', $('.footer').outerHeight() + 'px');
     $('.footer').addClass('u-absolute');
   });
-  console.log('what');
 };
 
 Identity.initialize_template_events();

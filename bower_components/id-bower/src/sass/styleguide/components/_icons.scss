@@ -527,3 +527,20 @@ Styleguide 4.7
 .icon_attach--no_background{
   background-color: transparent;
 }
+
+/*
+
+SVG
+
+Regulating the sizes of our svgs
+
+Markup:
+<img class="svg" src="../id-bower/public/images/illustrations/plan-dimension.svg">
+
+Styleguide 4.8
+
+*/
+
+.svg{
+  max-width: 150px;
+}
